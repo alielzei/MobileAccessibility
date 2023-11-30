@@ -1,51 +1,29 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
+    <style>
+        body {background-color: pink;}
+    </style>
         <meta charset="UTF-8">
-        <title> MAXIMMOBLE: Mobile App Accessibility Checklist </title>
+        <title> MAXIMMOBILE: Mobile App Accessibility Checklist </title>
     </head>
 
     <body>
-        <header> 
-            <h1> Mobile App Accessibility Checklist</h1>
-            
-            <div id="Website Description">
-            <p> This website provides a list of all checkpoints from WCAG guidelines. They are separated by priority based on the items impact of user accessibility. 
-                For each checkpoint, indicate whether it is present, not present, or not applicable.
-            </p>
-
-        </div>
-        </header>
-
-        <main>
-
-            <!-- Priority 1 Items -->
-            <section id="section1">
-                <h2>Priority 1</h2>
-                <!-- Create checklist 1 here -->
-                <ul>
-                    <li>
-                        <input type="checkbox" id="item1">
-                        <label for="item1">Checklist Item 1</label>
-                    </li>
-            </section>
-
-            <!-- Priority 2 Items -->
-            <section id="section2">
-                <h2>Priority 2</h2>
-                <!-- Create checklist 2 here -->
-            </section>
-
-            <!-- Priority 3 Items -->
-            <section id="section3">
-                <h2>Priority 3</h2>
-                <!-- Create checklist 3 here -->
-            </section>
-
-
-        </main>
-
-
-
+        <h1>MaximMobile</h1>
+        <p><b>Description</b>: This website provides a list of all checkpoints from WCAG guidelines. 
+            They are separated by priority based on the item's impact of user accessibility. 
+            For each checkpoint, indicate whether the item is present, not present, or not applicable.</p>
     </body>
+
+    <div class="group">
+        <p>Item #1</p>
+        <input type="radio" name="item1" />
+        <input type="radio" name="item1" />
+        <input type="radio" name="item1" checked="yes"/>
+    </div>
+
+    <form>
+        <input type= "submit"/> 
+    </form>
+
 </html>
