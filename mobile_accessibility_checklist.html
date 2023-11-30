@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang = "en">
+
     <head>
+    <!--CSS Styles-->
     <style>
         body {background-color: pink;}
+        table {border: solid 4px palevioletred}
+        .P1 {margin-bottom: 20px;}
+        .P2 {margin-bottom: 20px;}
+        .P3 {margin-bottom: 20px;}
     </style>
-        <meta charset="UTF-8">
-        <title> MAXIMMOBILE: Mobile App Accessibility Checklist </title>
+
+    <meta charset="UTF-8">
+    <title> MAXIMMOBILE: Mobile App Accessibility Checklist </title>
+    
     </head>
 
     <body>
@@ -13,173 +21,185 @@
         <p><b>Description</b>: This website provides a list of all checkpoints from WCAG guidelines. 
             They are separated by priority based on the item's impact of user accessibility. 
             For each checkpoint, indicate whether the item is present, not present, or not applicable.</p>
-    </body>
+        
+        <div class="P1">
+        <!--Priority 1 Table-->
+        <table>
+            <tr>
+                <th>Priority 1</Th>    
+                <th>Yes</th>
+                <th>No</th>
+                <th>N/A</th>
+            </tr>
 
-    <table>
-        <tr>
-            <th>Priority 1</Th>    
-            <th>Yes</th>
-            <th>No</th>
-            <th>N/A</th>
-        </tr>
-        <tr>
-            <th>
-            <details>  
-             <summary>
-                Item #1
-             </summary>
-             <p>
-                examples and links!!!
-             </p>
-            </details>  
-            </th>
-            <th><input type="radio" name="p1item1" /></th>
-            <th><input type="radio" name="p1item1" /></th>
-            <th><input type="radio" name="p1item1" checked="yes"/></th>
-        </tr>
-        <tr>
-            <th>
+            <tr>
+                <th>
                 <details>  
-                 <summary>
-                    Item #2
-                 </summary>
-                 <p>
-                    examples and links!!!
-                 </p>
-                </details>  
+                        <summary>
+                            Item #1
+                        </summary>
+                        <p>
+                            examples and links!!!
+                        </p>
+                    </details>  
                 </th>
-            <th><input type="radio" name="p1item2" /></th>
-            <th><input type="radio" name="p1item2" /></th>
-            <th><input type="radio" name="p1item2" checked="yes"/></th>
-        </tr>
-        <tr>
-            <th>
-                <details>  
-                 <summary>
-                    Item #3
-                 </summary>
-                 <p>
-                    examples and links!!!
-                 </p>
-                </details>  
-            </th>
-            <th><input type="radio" name="p1item3" /></th>
-            <th><input type="radio" name="p1item3" /></th>
-            <th><input type="radio" name="p1item3" checked="yes"/></th>
-        </tr>
-    </table>
+                <th><input type="radio" name="p1item1" /></th>
+                <th><input type="radio" name="p1item1" /></th>
+                <th><input type="radio" name="p1item1" checked="yes"/></th>
+            </tr>
 
-    <table>
-        <tr>
-            <th>Priority 2</Th>    
-            <th>Yes</th>
-            <th>No</th>
-            <th>N/A</th>
-        </tr>
-        <tr>
-            <th>
-                <details>  
-                    <summary>
-                       Item #1
-                    </summary>
-                    <p>
-                       examples and links!!!
-                    </p>
-                </details> 
-            </th>
-            <th><input type="radio" name="p2item1" /></th>
-            <th><input type="radio" name="p2item1" /></th>
-            <th><input type="radio" name="p2item1" checked="yes"/></th>
-        </tr>
-        <tr>
-            <th>
-                <details>  
-                    <summary>
-                       Item #2
-                    </summary>
-                    <p>
-                       examples and links!!!
-                    </p>
-                </details> 
-            </th>
-            <th><input type="radio" name="p2item2" /></th>
-            <th><input type="radio" name="p2item2" /></th>
-            <th><input type="radio" name="p2item2" checked="yes"/></th>
-        </tr>
-        <tr>
-            <th>
-                <details>  
-                    <summary>
-                       Item #3
-                    </summary>
-                    <p>
-                       examples and links!!!
-                    </p>
-                </details> 
-            </th>
-            <th><input type="radio" name="p2item3" /></th>
-            <th><input type="radio" name="p2item3" /></th>
-            <th><input type="radio" name="p2item3" checked="yes"/></th>
-        </tr>
-    </table>
+            <tr>
+                <th>
+                    <details>  
+                        <summary>
+                            Item #2
+                        </summary>
+                        <p>
+                            examples and links!!!
+                        </p>
+                    </details>  
+                </th>
+                <th><input type="radio" name="p1item2" /></th>
+                <th><input type="radio" name="p1item2" /></th>
+                <th><input type="radio" name="p1item2" checked="yes"/></th>
+            </tr>
+            <tr>
+                <th>
+                    <details>  
+                        <summary>
+                            Item #3
+                        </summary>
+                        <p>
+                        examples and links!!!
+                            </p>
+                    </details>  
+                </th>
+                <th><input type="radio" name="p1item3" /></th>
+                <th><input type="radio" name="p1item3" /></th>
+                <th><input type="radio" name="p1item3" checked="yes"/></th>
+            </tr>
+        </table>
+        </div>
 
-    <table>
-        <tr>
-            <th>Priority 3</Th>    
-            <th>Yes</th>
-            <th>No</th>
-            <th>N/A</th>
-        </tr>
-        <tr>
-            <th>
-                <details>  
-                    <summary>
-                       Item #1
-                    </summary>
-                    <p>
-                       examples and links!!!
-                    </p>
-                </details> 
-            </th>
-            <th><input type="radio" name="p3item1" /></th>
-            <th><input type="radio" name="p3item1" /></th>
-            <th><input type="radio" name="p3item1" checked="yes"/></th>
-        </tr>
-        <tr>
-            <th>
-                <details>  
-                    <summary>
-                       Item #2
-                    </summary>
-                    <p>
-                       examples and links!!!
-                    </p>
-                </details> 
-            </th>
-            <th><input type="radio" name="p3item2" /></th>
-            <th><input type="radio" name="p3item2" /></th>
-            <th><input type="radio" name="p3item2" checked="yes"/></th>
-        </tr>
-        <tr>
-            <th>
-                <details>  
-                    <summary>
-                       Item #3
-                    </summary>
-                    <p>
-                       examples and links!!!
-                    </p>
-                </details> 
-            </th>
-            <th><input type="radio" name="p3item3" /></th>
-            <th><input type="radio" name="p3item3" /></th>
-            <th><input type="radio" name="p3item3" checked="yes"/></th>
-        </tr>
-    </table>
+        <div class="P2">
+        <!--Priority 2 Table-->
+        <table>
+            <tr>
+                <th>Priority 2</Th>    
+                <th>Yes</th>
+                <th>No</th>
+                <th>N/A</th>
+            </tr>
+            <tr>
+                <th>
+                    <details>  
+                        <summary>
+                            Item #1
+                        </summary>
+                        <p>
+                            examples and links!!!
+                        </p>
+                    </details> 
+                </th>
+                <th><input type="radio" name="p2item1" /></th>
+                <th><input type="radio" name="p2item1" /></th>
+                <th><input type="radio" name="p2item1" checked="yes"/></th>
+            </tr>
+            <tr>
+                <th>
+                    <details>  
+                        <summary>
+                            Item #2
+                        </summary>
+                        <p>
+                            examples and links!!!
+                        </p>
+                    </details> 
+                </th>
+                <th><input type="radio" name="p2item2" /></th>
+                <th><input type="radio" name="p2item2" /></th>
+                <th><input type="radio" name="p2item2" checked="yes"/></th>
+            </tr>
+            <tr>
+                <th>
+                    <details>  
+                        <summary>
+                            Item #3
+                        </summary>
+                        <p>
+                            examples and links!!!
+                        </p>
+                    </details> 
+                </th>
+                <th><input type="radio" name="p2item3" /></th>
+                <th><input type="radio" name="p2item3" /></th>
+                <th><input type="radio" name="p2item3" checked="yes"/></th>
+            </tr>
+            </table>
+        </div>
 
-    <form>
-        <input type= "submit"/> 
-    </form>
+        <div class="P3">
+        <!--Priority 3 Table-->
+        <table>
+            <tr>
+                <th>Priority 3</Th>    
+                <th>Yes</th>
+                <th>No</th>
+                <th>N/A</th>
+            </tr>
+            <tr>
+                <th>
+                    <details>  
+                        <summary>
+                           Item #1
+                        </summary>
+                        <p>
+                            examples and links!!!
+                        </p>
+                    </details> 
+                </th>
+                <th><input type="radio" name="p3item1" /></th>
+                <th><input type="radio" name="p3item1" /></th>
+                <th><input type="radio" name="p3item1" checked="yes"/></th>
+            </tr>
+            <tr>
+                <th>
+                    <details>  
+                        <summary>
+                            Item #2
+                        </summary>
+                        <p>
+                            examples and links!!!
+                        </p>
+                    </details> 
+                </th>
+                <th><input type="radio" name="p3item2" /></th>
+                <th><input type="radio" name="p3item2" /></th>
+                <th><input type="radio" name="p3item2" checked="yes"/></th>
+            </tr>
+            <tr>
+                <th>
+                    <details>  
+                        <summary>
+                                Item #3
+                        </summary>
+                        <p>
+                           examples and links!!!
+                        </p>
+                    </details> 
+                </th>
+                <th><input type="radio" name="p3item3" /></th>
+                <th><input type="radio" name="p3item3" /></th>
+                <th><input type="radio" name="p3item3" checked="yes"/></th>
+            </tr>
+        </table>
+        </div>
+        
 
+        <form>
+            <input type= "submit"/> 
+        </form>
+
+    </body>
 
 </html>
