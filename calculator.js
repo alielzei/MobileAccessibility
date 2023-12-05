@@ -27,13 +27,13 @@ function calculateFinalScore(responses) {
         P2: 2,
         P3: 1
     };
-    for (var priority in responses) {
-        for (var item in responses[priority]) {
-            if (responses[priority][item] == true) {
-                finalScore += weights[priority];
+    for (var priority in responses) { //iterate through each priority
+        for (var item in responses[priority]) { //for each item in priority
+            if (responses[priority][item] == true) { //if checkbox is checked
+                finalScore += weights[priority]; //calculate based on weights
             }
         }
     }
     console.log('Final Score: ', finalScore);
-    alert('Your final score is: ' + finalScore);
+    alert('Your final score is: ' + finalScore); //temp
 }
