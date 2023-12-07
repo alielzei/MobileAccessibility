@@ -2,7 +2,7 @@ body {background-color: pink;}
 
 table {background-color: rgba(235, 208, 217, 0.584);}
 
-.table td {text-align:center;}
+.table td {text-align:center; align-content: center;}
 
 .table td:first-child, .table th:first-child {text-align: left;}
 
