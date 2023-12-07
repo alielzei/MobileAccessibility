@@ -1,185 +1,191 @@
 <!DOCTYPE html>
-
 <html lang = "en">
 
-    <head>
-    <!--CSS Styles-->
-    <style>
-        body {background-color: pink;}
-        table {background-color: rgba(235, 208, 217, 0.584);}
-        .table td {text-align:center;}
-        .table td:first-child, .table th:first-child {text-align: left;}
-        .P1 {margin-bottom: 20px;}
-        .P2 {margin-bottom: 20px;}
-        .P3 {margin-bottom: 20px;}
-    </style>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <title> MAXIMMOBILE: Mobile App Accessibility Checklist </title>
-    <header> <img src = "logo.png" alt = "The MaximMobile Logo"/> </header>
-    </head>
+</head>
 
-    <body>
-        <h1>MaximMobile</h1>
-        <p><b>Description</b>: This website provides a list of all checkpoints from WCAG guidelines. 
-            They are separated by priority based on the item's impact of user accessibility. 
-            For each checkpoint, indicate whether the item is present, not present, or not applicable.</p>
+<body>
+    <section class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall mm-header">
+            <section class="mdl-layout__header-row portfolio-logo-row">
+                <span class="mm-layout__title">
+                    <div class="mm-logo"></div>
+                </span>
+            </section>
+        </header>
+    </section>
+
+    <p><b>Description</b>: This website provides a list of all checkpoints from WCAG guidelines. 
+        They are separated by priority based on the item's impact of user accessibility. 
+        For each checkpoint, indicate whether the item is present, not present, or not applicable.</p>
         
-        <!--Priority 1 Table-->
-        <section class="P1">
-        <table>
-            <tr>
-                <th>Priority 1</Th>    
-                <th>Present?</th>
-            </tr>
+    <!--Priority 1 Table-->
+    <section class="P1">
+    <table>
+        <tr>
+            <th>Priority 1</Th>    
+            <th>Present?</th>
+        </tr>
 
-            <tr>
-                <td>
+        <tr>
+            <td>
                 <details>  
-                        <summary>
-                            Item #1 - Blah blah blah!
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details>  
-                </td>
-                <td><input type="checkbox" name="p1item1" /></th>
-            </tr>
-
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #2
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details>  
-                </td>
-                <td><input type="checkbox" name="p1item2" /></th>
-            </tr>
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #3
-                        </summary>
-                        <p>
+                    <summary>
+                        Item #1 - Blah blah blah!
+                    </summary>
+                    <p>
                         examples and links!!!
-                            </p>
-                    </details>  
-                </th>
-                <td><input type="checkbox" name="p1item3" /></th>
-            </tr>
-        </table>
-        </section>
+                    </p>
+                </details>  
+            </td>
+            <td><input type="checkbox" name="p1item1" /></th>
+        </tr>
+
+        <tr>
+            <td>
+                <details>  
+                    <summary>
+                        Item #2
+                    </summary>
+                    <p>
+                        examples and links!!!
+                    </p>
+                </details>  
+            </td>
+            <td><input type="checkbox" name="p1item2" /></th>
+        </tr>
+
+        <tr>
+            <td>
+                <details>  
+                    <summary>
+                        Item #3
+                    </summary>
+                    <p>
+                        examples and links!!!
+                    </p>
+                </details>  
+            </td>
+            <td><input type="checkbox" name="p1item3" /></th>
+        </tr>
+    </table>
+    </section>
         
-        <!--Priority 2 Table-->
-        <section class="P2">
-        <table>
-            <tr>
-                <th>Priority 2</Th>    
-                <th>Present?</th>
-            </tr>
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #1 - HE he he!
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td><input type="checkbox" name="p2item1" /></th>
-            </tr>
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #2
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td><input type="checkbox" name="p2item2" /></th>
-            </tr>
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #3
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td><input type="checkbox" name="p2item3" /></th>
-            </tr>
-            </table>
-        </section>
+    <!--Priority 2 Table-->
+    <section class="P2">
+    <table>
+        <tr>
+            <th>Priority 2</Th>    
+            <th>Present?</th>
+        </tr>
+
+        <tr>
+            <td>
+                <details>  
+                    <summary>
+                        Item #1 - HE he he!
+                    </summary>
+                    <p>
+                        examples and links!!!
+                    </p>
+                </details> 
+            </td>
+            <td><input type="checkbox" name="p2item1" /></th>
+        </tr>
+
+        <tr>
+            <td>
+                <details>  
+                    <summary>
+                        Item #2
+                    </summary>
+                    <p>
+                        examples and links!!!
+                    </p>
+                </details> 
+            </td>
+            <td><input type="checkbox" name="p2item2" /></th>
+        </tr>
+
+        <tr>
+            <td>
+                <details>  
+                    <summary>
+                        Item #3
+                    </summary>
+                    <p>
+                        examples and links!!!
+                    </p>
+                </details> 
+            </td>
+            <td><input type="checkbox" name="p2item3" /></th>
+        </tr>
+    </table>
+    </section>
         
-        <!--Priority 3 Table-->
-        <section class="P3">
-        <table>
-            <tr>
-                <th>Priority 3</Th>    
-                <th>Present?</th>
-            </tr>
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                           Item #1 - La la la!!
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td><input type="checkbox" name="p3item1" /></th>
-            </tr>
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #2
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td><input type="checkbox" name="p3item2" /></th>
-            </tr>
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                                Item #3
-                        </summary>
-                        <p>
-                           examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td><input type="checkbox" name="p3item3" /></th>
-            </tr>
-        </table>
+    <!--Priority 3 Table-->
+    <section class="P3">
+    <table>
+        <tr>
+            <th>Priority 3</Th>    
+            <th>Present?</th>
+        </tr>
+        <tr>
+            <td>
+                <details>  
+                    <summary>
+                        Item #1 - La la la!!
+                    </summary>
+                    <p>
+                        examples and links!!!
+                    </p>
+                </details> 
+            </td>
+            <td><input type="checkbox" name="p3item1" /></th>
+        </tr>
+
+        <tr>
+            <td>
+                <details>  
+                    <summary>
+                        Item #2
+                    </summary>
+                    <p>
+                        examples and links!!!
+                    </p>
+                </details> 
+            </td>
+            <td><input type="checkbox" name="p3item2" /></th>
+        </tr>
+
+        <tr>
+            <td>
+                <details>  
+                    <summary>
+                        Item #3
+                    </summary>
+                    <p>
+                        examples and links!!!
+                    </p>
+                </details> 
+            </td>
+            <td><input type="checkbox" name="p3item3" /></th>
+        </tr>
+    </table>
     </section>
     
-        <form>
-            <input type= "submit"/> 
-        </form>
-        <script src="calculator.js"></script>
-    </body>
+    <!--Submit Buton-->
+    <form>
+        <input type= "submit"/> 
+    </form>
+
+    <!--Final Score Calculation Script-->
+    <script src="calculator.js"></script>
+
+</body>
 
 </html>

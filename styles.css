@@ -1,0 +1,55 @@
+body {background-color: pink;}
+
+table {background-color: rgba(235, 208, 217, 0.584);}
+
+.table td {text-align:center;}
+
+.table td:first-child, .table th:first-child {text-align: left;}
+
+.P1 {margin-bottom: 20px;}
+
+.P2 {margin-bottom: 20px;}
+
+.P3 {margin-bottom: 20px;}
+
+.mm-header {
+    position: relative;
+    background-image: url(images/header-bg.png);
+}
+
+.mm-header .mdl-layout__header-row {
+    padding: 0;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+}
+
+.is-compact .portfolio-logo row {
+    min-height: auto;
+}
+
+.mm-logo {
+    background: url(images/logo.png) 50% no-repeat;
+    background-size: cover;
+    height: 150px;
+    width: 200px;
+    margin: auto auto 10px;
+}
+
+.is-compact .mm-logo {
+    height: 50px;
+    width: 50px;
+    margin-top: 7px;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-left-padding {
+    padding-left: 0;
+}
+
+no-bottom-padding {
+    padding-bottom: 0;
+}
