@@ -24,7 +24,7 @@ table {background-color: rgba(235, 208, 217, 0.584);}
         justify-content: center;
 }
 
-.is-compact .portfolio-logo row {
+.is-compact .mm-logo row {
     min-height: auto;
 }
 
@@ -38,7 +38,7 @@ table {background-color: rgba(235, 208, 217, 0.584);}
 
 .is-compact .mm-logo {
     height: 50px;
-    width: 50px;
+    width: 100px;
     margin-top: 7px;
 }
 
