@@ -43,30 +43,44 @@ table {background-color: rgba(235, 208, 217, 0.584);}
     margin-top: 7px;
 }
 
-.mdl-card {
+.mdl-data-table {
+    background-color: rgb(253, 232, 235);
     height: auto;
-    display: flex;
+    width: auto;
+    display: auto;
     flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 
-.mdl-card > * {
-    height: auto;
-  }
-
-.mdl-card .mdl-card__supporting-text {
-    margin: 40px;
-    flex-grow: 1;
-    padding: 0;
-    color: inherit;
-    width: calc(100% - 80px);
-  }
-
-.mdl-card__supporting-text h4 {
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-
-.mdl-layout__content section:not(:last-of-type) {
-    position: relative;
-    margin-bottom: 48px;
+.mdl-data-table tbody td:first-child {
+    -webkit-align-items: left;
+        -ms-flex-align: left;
+            align-items: left;
 }
+
+.mdl-data-table > * {
+    height: auto;
+    width: auto;
+  }
+
+  .no-padding {
+    padding: 0;
+  }
+  
+  .no-left-padding{
+    padding-left: 0;
+  }
+  
+  .no-bottom-padding {
+    padding-bottom: 0;
+  }
+  
+  .padding-top {
+    padding: 10px 0 0;
+  }
