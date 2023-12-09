@@ -34,6 +34,7 @@ table {background-color: rgba(235, 208, 217, 0.584);}
     height: 150px;
     width: 200px;
     margin: auto auto 10px;
+    margin-left: 10px;
 }
 
 .is-compact .mm-logo {
@@ -42,14 +43,30 @@ table {background-color: rgba(235, 208, 217, 0.584);}
     margin-top: 7px;
 }
 
-.no-padding {
+.mdl-card {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+.mdl-card > * {
+    height: auto;
+  }
+
+.mdl-card .mdl-card__supporting-text {
+    margin: 40px;
+    flex-grow: 1;
     padding: 0;
-}
+    color: inherit;
+    width: calc(100% - 80px);
+  }
 
-.no-left-padding {
-    padding-left: 0;
-}
+.mdl-card__supporting-text h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
 
-no-bottom-padding {
-    padding-bottom: 0;
+.mdl-layout__content section:not(:last-of-type) {
+    position: relative;
+    margin-bottom: 48px;
 }
