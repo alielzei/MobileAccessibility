@@ -18,228 +18,239 @@
 
 <body>
     <section class="mdl-layout__container">
-        <section class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-drawer is-upgraded is-small-screen" data-upgraded=",MaterialLayout">
+        <!--has-drawer is-upgraded is-small-screen" data-upgraded=",MaterialLayout"-->
+        <section class="mdl-layout mdl-js-layout mm-layout-waterfall">
             <header class="mdl-layout__header mdl-layout__header--waterfall mm-header">
+                <!--Only Visible at top of page-->
                 <section class="mdl-layout__header-row mm-logo-row">
-                    <span class="mm-layout__title">
+                    <span class="mm-layout__title"></span>
                         <section class="mm-logo"></section>
-                    </span>
+                    <section class="mdl-layout-spacer"></section>
+                    <section class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+                        <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp"></label>
+                        <section class="mdl-textfield__expandable-holder">
+                            <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp">
+                        </section>
+                    </section>
                 </section>
+                <!--Always Visible-->
+                <section class="mdl-layout__header-row mm-logo-row"></section>
             </header>
+        <main class="mdl-layout__content">
+            <p><b>Description</b>: This website provides a list of all checkpoints from WCAG guidelines. 
+                They are separated by priority based on the item's impact of user accessibility. 
+                For each checkpoint, indicate if the item is present.</p>
+                
+            <!--Priority 1 Table-->
+            <section class="P1">
+            <table>
+                <tr>
+                    <th>Priority 1</Th>    
+                    <th>Present?</th>
+                </tr>
 
-        <p><b>Description</b>: This website provides a list of all checkpoints from WCAG guidelines. 
-            They are separated by priority based on the item's impact of user accessibility. 
-            For each checkpoint, indicate if the item is present.</p>
+                <tr>
+                    <td>
+                        <details>  
+                            <summary>
+                                Item #1 - Blah blah blah!
+                            </summary>
+                            <p>
+                                examples and links!!!
+                            </p>
+                        </details>  
+                    </td>
+                    <td>
+                        <label for="p1item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p1item1" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <details>  
+                            <summary>
+                                Item #2
+                            </summary>
+                            <p>
+                                examples and links!!!
+                            </p>
+                        </details>  
+                    </td>
+                    <td>
+                        <label for="p1item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p1item2" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <details>  
+                            <summary>
+                                Item #3
+                            </summary>
+                            <p>
+                                examples and links!!!
+                            </p>
+                        </details>  
+                    </td>
+                    <td>
+                        <label for="p1item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p1item3" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                </tr>
+            </table>
+            </section>
+                
+            <!--Priority 2 Table-->
+            <section class="P2">
+            <table>
+                <tr>
+                    <th>Priority 2</Th>    
+                    <th>Present?</th>
+                </tr>
+
+                <tr>
+                    <td>
+                        <details>  
+                            <summary>
+                                Item #1 - HE he he!
+                            </summary>
+                            <p>
+                                examples and links!!!
+                            </p>
+                        </details> 
+                    </td>
+                    <td>
+                        <label for="p2item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p2item1" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <details>  
+                            <summary>
+                                Item #2
+                            </summary>
+                            <p>
+                                examples and links!!!
+                            </p>
+                        </details> 
+                    </td>
+                    <td>
+                        <label for="p2item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p2item2" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <details>  
+                            <summary>
+                                Item #3
+                            </summary>
+                            <p>
+                                examples and links!!!
+                            </p>
+                        </details> 
+                    </td>
+                    <td>
+                        <label for="p2item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p2item3" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                </tr>
+            </table>
+            </section>
+                
+            <!--Priority 3 Table-->
+            <section class="P3">
+            <table>
+                <tr>
+                    <th>Priority 3</Th>    
+                    <th>Present?</th>
+                </tr>
+                <tr>
+                    <td>
+                        <details>  
+                            <summary>
+                                Item #1 - La la la!!
+                            </summary>
+                            <p>
+                                examples and links!!!
+                            </p>
+                        </details> 
+                    </td>
+                    <td>
+                        <label for="p3item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p3item1" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <details>  
+                            <summary>
+                                Item #2
+                            </summary>
+                            <p>
+                                examples and links!!!
+                            </p>
+                        </details> 
+                    </td>
+                    <td>
+                        <label for="p3item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p3item2" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <details>  
+                            <summary>
+                                Item #3
+                            </summary>
+                            <p>
+                                examples and links!!!
+                            </p>
+                        </details> 
+                    </td>
+                    <td>
+                        <label for="p3item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p3item3" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                </tr>
+            </table>
+            </section>
             
-        <!--Priority 1 Table-->
-        <section class="P1">
-        <table>
-            <tr>
-                <th>Priority 1</Th>    
-                <th>Present?</th>
-            </tr>
+            <!--Submit Buton-->
+            <form>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    Submit
+                </button>
+            </form>
 
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #1 - Blah blah blah!
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details>  
-                </td>
-                <td>
-                    <label for="p1item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p1item1" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #2
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details>  
-                </td>
-                <td>
-                    <label for="p1item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p1item2" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #3
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details>  
-                </td>
-                <td>
-                    <label for="p1item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p1item3" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
-        </table>
+            </section>
         </section>
-            
-        <!--Priority 2 Table-->
-        <section class="P2">
-        <table>
-            <tr>
-                <th>Priority 2</Th>    
-                <th>Present?</th>
-            </tr>
-
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #1 - HE he he!
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td>
-                    <label for="p2item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p2item1" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #2
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td>
-                    <label for="p2item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p2item2" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #3
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td>
-                    <label for="p2item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p2item3" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
-        </table>
-        </section>
-            
-        <!--Priority 3 Table-->
-        <section class="P3">
-        <table>
-            <tr>
-                <th>Priority 3</Th>    
-                <th>Present?</th>
-            </tr>
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #1 - La la la!!
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td>
-                    <label for="p3item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p3item1" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #2
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td>
-                    <label for="p3item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p3item2" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #3
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td>
-                    <label for="p3item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p3item3" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
-        </table>
-        </section>
-        
-        <!--Submit Buton-->
-        <form>
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                Submit
-            </button>
-        </form>
-
-        </section>
-    </section>
+    </main>
 
     <!--Final Score Calculation Script-->
     <script src="calculator.js"></script>
