@@ -34,11 +34,17 @@
                 <!--Always Visible-->
                 <section class="mdl-layout__header-row mm-logo-row"></section>
             </header>
-            
+
         <main class="mdl-layout__content">
-            <p><b>Description</b>: This website provides a list of all checkpoints from WCAG guidelines. 
-                They are separated by priority based on the item's impact of user accessibility. 
-                For each checkpoint, indicate if the item is present.</p>
+            <table class="mdl-data-table mdl-js-data-table">
+                <tbody>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <p><b>Description</b>: This website provides a list of all checkpoints from WCAG guidelines. 
+                            They are separated by priority based on the item's impact of user accessibility. 
+                            For each checkpoint, indicate if the item is present.</p>
+                    </td>
+                </tbody>
+            </table>
                 
             <!--Priority 1 Table-->
             <section class="P1">
@@ -379,10 +385,10 @@
                         <td class="mdl-data-table__cell--non-numeric">
                             <details>  
                                 <summary>
-                                    <b>Item #1 - La la la!!</b>
+                                    <b>Logical Tab Order</b>
                                 </summary>
                                 <p>
-                                    examples and links!!!
+                                    Elements need to follow a logical order: left to right, and from top to bottom.
                                 </p>
                             </details> 
                         </td>
@@ -398,10 +404,10 @@
                         <td class="mdl-data-table__cell--non-numeric">
                             <details>  
                                 <summary>
-                                    <b>Item #2</b>
+                                    <b>Consistent Navigation Labeling</b>
                                 </summary>
                                 <p>
-                                    examples and links!!!
+                                    Navigational mechanisms that are present on more than one of the app interfaces are presented in the same relative order. 
                                 </p>
                             </details> 
                         </td>
@@ -417,10 +423,92 @@
                         <td class="mdl-data-table__cell--non-numeric">
                             <details>  
                                 <summary>
-                                    <b>Item #3</b>
+                                    <b>Replacements for Device Manipulation Gestures</b>
                                 </summary>
                                 <p>
-                                    examples and links!!!
+                                    Certain control operations can be performed by physically manipulating the device. 
+                                    These physical controls can pose challenges. 
+                                    Therefore, provide users with touch and keyboard operable controls. 
+                                </p>
+                            </details> 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <label for="p3item4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                                <input type="checkbox" id="p3item4" class="mdl-checkbox__input" unchecked>
+                                <span class="mdl-checkbox__label"></span>
+                            </label>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <details>  
+                                <summary>
+                                    <b>Descriptions of Accessibility Features</b>
+                                </summary>
+                                <p>
+                                    An accessibility feature that is present within a mobile application should be described in the application’s documentation or user interface. 
+                                </p>
+                            </details> 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <label for="p3item5" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                                <input type="checkbox" id="p3item5" class="mdl-checkbox__input" unchecked>
+                                <span class="mdl-checkbox__label"></span>
+                            </label>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <details>  
+                                <summary>
+                                    <b>Changes Between Versions</b>
+                                </summary>
+                                <p>
+                                    If changes to any features are made to the application, 
+                                    especially concerning accessibility features, 
+                                    these changes are documented and presented to the user. 
+                                </p>
+                            </details> 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <label for="p3item6" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                                <input type="checkbox" id="p3item6" class="mdl-checkbox__input" unchecked>
+                                <span class="mdl-checkbox__label"></span>
+                            </label>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <details>  
+                                <summary>
+                                    <b>Display Corresponding Virtual Keyboard Per Data Entry Type</b>
+                                </summary>
+                                <p>
+                                    Customize the device settings for applicable devices in order to display the corresponding keyboard based on the data entry that is required. 
+                                    For example, numerical data entries should display the numerical/symbolic keyboard on the device. 
+                                </p>
+                            </details> 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <label for="p3item7" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                                <input type="checkbox" id="p3item7" class="mdl-checkbox__input" unchecked>
+                                <span class="mdl-checkbox__label"></span>
+                            </label>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <details>  
+                                <summary>
+                                    <b>Customizable User Interface Settings</b>
+                                </summary>
+                                <p>
+                                    Allow the user to have a mechanism to change the user interface settings, confirm the new changes, and reverse setting changes when desired. 
+                                    The user should also be able to restore the user interface settings to the default selections. 
                                 </p>
                             </details> 
                         </td>

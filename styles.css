@@ -46,7 +46,8 @@ body {background-color: pink;}
     bottom: 0;
     margin-right: 100px;
     margin-left: 100px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    margin-top: 10px;
     z-index: 900;
     flex-direction: column;
 }
@@ -54,8 +55,8 @@ body {background-color: pink;}
 .mdl-data-table td {
     text-align: center;
     vertical-align: top;
-    word-wrap: break-word;
-    word-break: break-all;
+    word-wrap: normal;
+    word-break: normal;
     text-wrap: wrap;
 }
 
