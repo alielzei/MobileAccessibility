@@ -1,11 +1,5 @@
 body {background-color: pink;}
 
-table {background-color: rgba(235, 208, 217, 0.584);}
-
-.table td {text-align:center; align-content: center;}
-
-.table td:first-child, .table th:first-child {text-align: left;}
-
 .P1 {margin-bottom: 20px;}
 
 .P2 {margin-bottom: 20px;}
@@ -31,8 +25,8 @@ table {background-color: rgba(235, 208, 217, 0.584);}
 .mm-logo {
     background: url(images/logo.png) 50% no-repeat;
     background-size: cover;
-    height: 150px;
-    width: 200px;
+    height: 125px;
+    width: 175px;
     margin: auto auto 10px;
     margin-left: 10px;
 }
@@ -44,43 +38,39 @@ table {background-color: rgba(235, 208, 217, 0.584);}
 }
 
 .mdl-data-table {
-    background-color: rgb(253, 232, 235);
+    background-color: rgba(248, 226, 230, 0.808);
     height: auto;
-    width: auto;
-    display: auto;
     flex-direction: column;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    box-sizing: border-box;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        align-items: center;  
     display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-.mdl-data-table tbody td:first-child {
-    -webkit-align-items: left;
-        -ms-flex-align: left;
-            align-items: left;
+    padding: 10px, 25px, 25px, 10px;
 }
 
-.mdl-data-table > * {
-    height: auto;
-    width: auto;
-  }
+.mdl-data-table td {
+    text-align: center;
+    vertical-align: top;
+}
 
-  .no-padding {
-    padding: 0;
-  }
+.mdl-data-table td:first-child {
+    width: auto;
+    text-align: left;
+}
+
+.no-padding {
+    padding: 0px;
+}
   
-  .no-left-padding{
-    padding-left: 0;
-  }
+.no-left-padding{
+    padding-left: 0px;
+}
   
-  .no-bottom-padding {
-    padding-bottom: 0;
-  }
+.no-bottom-padding {
+    padding-bottom: 0px;
+}
   
-  .padding-top {
+.padding-top {
     padding: 10px 0 0;
-  }
+}
