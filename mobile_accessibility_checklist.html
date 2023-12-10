@@ -7,9 +7,8 @@
     <meta name="description" content="MaximMobile - A Mobile Accessibilty Checklist">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css"/>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <link rel="stylesheet" href="styles.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -19,228 +18,557 @@
 
 <body>
     <section class="mdl-layout__container">
-        <section class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-drawer is-upgraded is-small-screen" data-upgraded=",MaterialLayout">
+        <section class="mdl-layout mdl-js-layout mm-layout-waterfall">
             <header class="mdl-layout__header mdl-layout__header--waterfall mm-header">
+                <!--Only Visible at top of page-->
                 <section class="mdl-layout__header-row mm-logo-row">
-                    <span class="mm-layout__title">
+                    <span class="mm-layout__title"></span>
                         <section class="mm-logo"></section>
-                    </span>
+                    <section class="mdl-layout-spacer"></section>
+                    <section class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+                        <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp"></label>
+                        <section class="mdl-textfield__expandable-holder">
+                            <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp">
+                        </section>
+                    </section>
                 </section>
+                <!--Always Visible-->
+                <section class="mdl-layout__header-row mm-logo-row"></section>
             </header>
 
-        <p><b>Description</b>: This website provides a list of all checkpoints from WCAG guidelines. 
-            They are separated by priority based on the item's impact of user accessibility. 
-            For each checkpoint, indicate whether the item is present, not present, or not applicable.</p>
+        <main class="mdl-layout__content">
+            <table class="mdl-data-table mdl-js-data-table">
+                <tbody>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <p><b>Description</b>: This website provides a list of all checkpoints from WCAG guidelines. 
+                            They are separated by priority based on the item's impact of user accessibility. 
+                            For each checkpoint, indicate if the item is present.</p>
+                    </td>
+                </tbody>
+            </table>
+                
+            <!--Priority 1 Table-->
+            <section class="P1">
+            <table class="mdl-data-table mdl-js-data-table">
+
+            <thead>
+                <tr>
+                    <th class="mdl-data-table__cell--non-numeric">Priority 1</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <label for="p1item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p1item1" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <details>  
+                            <summary>
+                                <b>Text Alternatives</b>
+                            </summary>
+                            <p>
+                                Text descriptions should be available for images and other visual items.
+                                All non-text content should have a text alternative that serves an equilvalent purpose. <br>
+                                Here is a good example:<br> <img src="https://support.content.office.net/en-us/media/7c17b74c-bb41-4692-a934-db5a5d7f8c76.png" alt = "Image of Group of People working on laptop with caption on top">
+                        </details>  
+                    </td>
+                    
+                </tr>
+
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <label for="p1item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p1item2" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <details>  
+                            <summary>
+                                <b>Descriptive Labels</b>
+                            </summary>
+                            <p>
+                                Descriptive labels for all user interface components such as buttons/other interactive elements
+                                <!-- This item didnt have any examples -->
+                            </p>
+                        </details>  
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <label for="p1item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p1item3" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <details>  
+                            <summary>
+                                <b>Multimodal Touch Screen Gestures</b>
+                            </summary>
+                            <p>
+                                Allow multiple forms of input (to accomodate those with dexterity issues can't pinch so have alternative for them)
+                                <!-- This item didnt have any examples -->
+                            </p>
+                        </details>  
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <label for="p1item4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p1item4" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <details>  
+                            <summary>
+                                <b>Context-Sensitive Help</b>
+                            </summary>
+                            <p>
+                                Some users with disabilities may be more likely to make mistakes than users without disabilities. 
+                                Using context-sensitive help, users find out how to perform an operation without losing track of what they are doing.
+                                <!-- This item didnt have any examples -->
+                            </p>
+                        </details>  
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <label for="p1item5" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p1item5" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <details>  
+                            <summary>
+                                <b>Ease of Seeing Content</b>
+                            </summary>
+                            <p>
+                                Color should be used to convey information, indicate an action, prompt a response, or distinguish a visual element. The colors used on the application should use a contrast ratio of 3:1. 
+                                Text cues should be provided for information displayed by color differences. <br>
+                                Heres a good reference:<br>
+                                <!--TODO FIX!!!!-->
+                            <!-- IMAGE FROM THE SPREADSHEET ISN'T WORKING -->
+                                
+                            </p>
+                        </details>  
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <label for="p1item6" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p1item6" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <details>  
+                            <summary>
+                                <b>Ease of Hearing Content</b>
+                            </summary>
+                            <p>
+                                Any audio should be controlled by starting, pausing, rewinding, and forwarding it. 
+                                A mechanism should be provided in order to control audio volume independently from the device volume level
+                    
+                            <!-- This item didnt have any examples -->
+                                
+                            </p>
+                        </details>  
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <label for="p1item7" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p1item7" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <details>  
+                            <summary>
+                                <b>Intuitive Navigation</b>
+                            </summary>
+                            <p>
+                                The navigation in the application starts in a predictable location without skipping over content. <br>
+                                Heres a good example:<br>
+                                <img src="https://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/21491084-1bfe-402b-9860-14b7de148af8/thumb-zone-large-opt.jpg" alt="Image of Mobile app with navigation bar at bottom of screen and shows range of thumb motion" width="300">
+                            </p>
+                        </details>  
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <label for="p1item8" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p1item8" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <details>  
+                            <summary>
+                                <b>Screen Adaptability</b>
+                            </summary>
+                            <p>
+                                The app display should adapt to the user's device. 
+                                Ensure all elements are appropriately sized for the user's screen.  
+                                App should also allow landscape and portrait orientation modes. 
+                            </p>
+                        </details>  
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <label for="p1item9" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p1item9" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <details>  
+                            <summary>
+                                <b>Photosensitivity Management</b>
+                            </summary>
+                            <p>
+                                In order to prevent seizures among prone users, 
+                                the app will not display a user interface component that flashes more than three times in a one-second period.  
+                            </p>
+                        </details>  
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+            </section>
             
-        <!--Priority 1 Table-->
-        <section class="P1">
-        <table>
-            <tr>
-                <th>Priority 1</Th>    
-                <th>Present?</th>
-            </tr>
+            <!--Priority 2 Table-->
+            <section class="P2">
+            <table class="mdl-data-table mdl-js-data-table">
+            <thead>
+                <tr>
+                    <th class="mdl-data-table__cell--non-numeric">Priority 2</Th>
+                </tr>
+            </thead>
 
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #1 - Blah blah blah!
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details>  
-                </td>
-                <td>
-                    <label for="p1item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p1item1" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <label for="p2item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p2item1" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <details>  
+                            <summary>
+                                <b>Consistent Content Structure</b>
+                            </summary>
+                            <p>
+                                Information in the document should be presented through visual or audio formatting. 
+                                Headers are ordered correctly, without header jumps.
+                            </p>
+                        </details> 
+                    </td>
+                </tr>
 
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #2
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details>  
-                </td>
-                <td>
-                    <label for="p1item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p1item2" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <label for="p2item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p2item2" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <details>  
+                            <summary>
+                                <b>Text Resizable</b>
+                            </summary>
+                            <p>
+                                Users should be able to adjust the text size in the app up to 200% without the loss of content. 
+                                This excludes captions and images of text.
+                            </p>
+                        </details> 
+                    </td>
+                </tr>
 
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #3
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details>  
-                </td>
-                <td>
-                    <label for="p1item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p1item3" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
-        </table>
-        </section>
-            
-        <!--Priority 2 Table-->
-        <section class="P2">
-        <table>
-            <tr>
-                <th>Priority 2</Th>    
-                <th>Present?</th>
-            </tr>
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <label for="p2item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p2item3" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <details>  
+                            <summary>
+                                <b>Captions for Audio/Video</b>
+                            </summary>
+                            <p>
+                                Provide users with closed captions for videos & transcripts for audio content.
+                            </p>
+                        </details> 
+                    </td>
+                </tr>
 
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #1 - HE he he!
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td>
-                    <label for="p2item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p2item1" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <label for="p2item4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p2item4" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <details>  
+                            <summary>
+                                <b>Error Suggestion</b>
+                            </summary>
+                            <p>
+                                The app should provide suggestions to user input errors. 
+                                Unless the suggestion jeapordizes the security or purpose of the content, the input error should be detected and corrected. 
+                            </p>
+                        </details> 
+                    </td>
+                </tr>
 
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #2
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td>
-                    <label for="p2item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p2item2" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <label for="p2item5" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p2item5" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <details>  
+                            <summary>
+                                <b>Equivalent Accessible Alternatives</b>
+                            </summary>
+                            <p>
+                                If a user interface component is incompatible with an accessibility service, the application provides an alternative user interface component that complies with said accessibility service. 
+                            </p>
+                        </details> 
+                    </td>
+                </tr>
 
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #3
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td>
-                    <label for="p2item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p2item3" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
-        </table>
-        </section>
-            
-        <!--Priority 3 Table-->
-        <section class="P3">
-        <table>
-            <tr>
-                <th>Priority 3</Th>    
-                <th>Present?</th>
-            </tr>
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #1 - La la la!!
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td>
-                    <label for="p3item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p3item1" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <label for="p2item6" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p2item6" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <details>  
+                            <summary>
+                                <b>Indicative Guides</b>
+                            </summary>
+                            <p>
+                                If the user has completed an action and needs to be guided to an additional action, 
+                                there is an indicator that guides the user to complete the proper action. 
+                                Ensure that there is audio/visual alternatives for accomodating screen readers.
+                            </p>
+                        </details> 
+                    </td>
+                </tr>
 
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #2
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td>
-                    <label for="p3item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p3item2" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <details>  
-                        <summary>
-                            Item #3
-                        </summary>
-                        <p>
-                            examples and links!!!
-                        </p>
-                    </details> 
-                </td>
-                <td>
-                    <label for="p3item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                        <input type="checkbox" id="p3item3" class="mdl-checkbox__input" unchecked>
-                        <span class="mdl-checkbox__label"></span>
-                    </label>
-                </td>
-            </tr>
-        </table>
-        </section>
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <label for="p2item7" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" id="p2item7" class="mdl-checkbox__input" unchecked>
+                            <span class="mdl-checkbox__label"></span>
+                        </label>
+                    </td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <details>  
+                            <summary>
+                                <b>Multiple Ways to Access Content</b>
+                            </summary>
+                            <p>
+                                Make it possible for users to locate content in a manner that best meets their needs. 
+                                Users may find one technique easier or more comprehensible to use than another.
+                            </p>
+                        </details> 
+                    </td>
+                </tr>
         
-        <!--Submit Buton-->
-        <form action="final_score.html" method="post" id="scoreForm">
-            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                Submit
-            </button>
-        </form>
+            </tbody>
+            </table>
+            </section>
+                
+            <!--Priority 3 Table-->
+            <section class="P3">
+            <table class="mdl-data-table mdl-js-data-table">
+                <thead>
+                    <tr>
+                        <th class="mdl-data-table__cell--non-numeric">Priority 3</Th>
+                    </tr>
+                </thead>
 
+                <tbody>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <label for="p3item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                                <input type="checkbox" id="p3item1" class="mdl-checkbox__input" unchecked>
+                                <span class="mdl-checkbox__label"></span>
+                            </label>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <details>  
+                                <summary>
+                                    <b>Logical Tab Order</b>
+                                </summary>
+                                <p>
+                                    Elements need to follow a logical order: left to right, and from top to bottom.
+                                </p>
+                            </details> 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <label for="p3item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                                <input type="checkbox" id="p3item2" class="mdl-checkbox__input" unchecked>
+                                <span class="mdl-checkbox__label"></span>
+                            </label>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <details>  
+                                <summary>
+                                    <b>Consistent Navigation Labeling</b>
+                                </summary>
+                                <p>
+                                    Navigational mechanisms that are present on more than one of the app interfaces are presented in the same relative order. 
+                                </p>
+                            </details> 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <label for="p3item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                                <input type="checkbox" id="p3item3" class="mdl-checkbox__input" unchecked>
+                                <span class="mdl-checkbox__label"></span>
+                            </label>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <details>  
+                                <summary>
+                                    <b>Replacements for Device Manipulation Gestures</b>
+                                </summary>
+                                <p>
+                                    Certain control operations can be performed by physically manipulating the device. 
+                                    These physical controls can pose challenges. 
+                                    Therefore, provide users with touch and keyboard operable controls. 
+                                </p>
+                            </details> 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <label for="p3item4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                                <input type="checkbox" id="p3item4" class="mdl-checkbox__input" unchecked>
+                                <span class="mdl-checkbox__label"></span>
+                            </label>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <details>  
+                                <summary>
+                                    <b>Descriptions of Accessibility Features</b>
+                                </summary>
+                                <p>
+                                    An accessibility feature that is present within a mobile application should be described in the application’s documentation or user interface. 
+                                </p>
+                            </details> 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <label for="p3item5" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                                <input type="checkbox" id="p3item5" class="mdl-checkbox__input" unchecked>
+                                <span class="mdl-checkbox__label"></span>
+                            </label>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <details>  
+                                <summary>
+                                    <b>Changes Between Versions</b>
+                                </summary>
+                                <p>
+                                    If changes to any features are made to the application, 
+                                    especially concerning accessibility features, 
+                                    these changes are documented and presented to the user. 
+                                </p>
+                            </details> 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <label for="p3item6" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                                <input type="checkbox" id="p3item6" class="mdl-checkbox__input" unchecked>
+                                <span class="mdl-checkbox__label"></span>
+                            </label>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <details>  
+                                <summary>
+                                    <b>Display Corresponding Virtual Keyboard Per Data Entry Type</b>
+                                </summary>
+                                <p>
+                                    Customize the device settings for applicable devices in order to display the corresponding keyboard based on the data entry that is required. 
+                                    For example, numerical data entries should display the numerical/symbolic keyboard on the device. 
+                                </p>
+                            </details> 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <label for="p3item7" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                                <input type="checkbox" id="p3item7" class="mdl-checkbox__input" unchecked>
+                                <span class="mdl-checkbox__label"></span>
+                            </label>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <details>  
+                                <summary>
+                                    <b>Customizable User Interface Settings</b>
+                                </summary>
+                                <p>
+                                    Allow the user to have a mechanism to change the user interface settings, confirm the new changes, and reverse setting changes when desired. 
+                                    The user should also be able to restore the user interface settings to the default selections. 
+                                </p>
+                            </details> 
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </section>
+            
+            <!--Submit Buton-->
+            <form>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    Submit
+                </button>
+            </form>
+
+            </section>
         </section>
-    </section>
+
+    </main>
+
     <!--Final Score Calculation Script-->
     <script src="js/calculator.js"></script>
 

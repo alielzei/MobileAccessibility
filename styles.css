@@ -1,11 +1,5 @@
 body {background-color: pink;}
 
-table {background-color: rgba(235, 208, 217, 0.584);}
-
-.table td {text-align:center; align-content: center;}
-
-.table td:first-child, .table th:first-child {text-align: left;}
-
 .P1 {margin-bottom: 20px;}
 
 .P2 {margin-bottom: 20px;}
@@ -31,9 +25,10 @@ table {background-color: rgba(235, 208, 217, 0.584);}
 .mm-logo {
     background: url(images/logo.png) 50% no-repeat;
     background-size: cover;
-    height: 150px;
-    width: 200px;
+    height: 125px;
+    width: 175px;
     margin: auto auto 10px;
+    margin-left: 10px;
 }
 
 .is-compact .mm-logo {
@@ -42,16 +37,53 @@ table {background-color: rgba(235, 208, 217, 0.584);}
     margin-top: 7px;
 }
 
+.mdl-data-table {
+    background-color: rgba(248, 226, 230, 0.808);
+    height: auto;
+    position: relative;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    z-index: 900;
+    flex-direction: column;
+}
+
+.mdl-data-table td {
+    text-align: center;
+    vertical-align: top;
+    word-wrap: normal;
+    word-break: normal;
+    text-wrap: wrap;
+}
+
+.mdl-data-table td:first-child {
+    width: auto;
+    text-align: left;
+}
+
+.mdl-button {
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
 .no-padding {
-    padding: 0;
+    padding: 0px;
 }
-
-.no-left-padding {
-    padding-left: 0;
+  
+.no-left-padding{
+    padding-left: 0px;
 }
-
-no-bottom-padding {
-    padding-bottom: 0;
+  
+.no-bottom-padding {
+    padding-bottom: 0px;
+}
+  
+.padding-top {
+    padding: 10px 0 0;
 }
 /*test*/
 .horizontal-scale {
