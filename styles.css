@@ -31,10 +31,35 @@ body {background-color: pink;}
     margin-left: 10px;
 }
 
+.mm-layout__title {
+    font-size:x-large;
+    color:rgb(204,150,151);
+    padding: 20px;
+    margin-top: 65px;
+}
+
+.is-compact .mm-layout__title {
+    color: rgba(236,217,219,255);
+}
+
 .is-compact .mm-logo {
     height: 50px;
     width: 100px;
     margin-top: 7px;
+}
+
+.mm-desc {
+    font-size: medium;
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 95px;
+    margin-left: 95px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(248, 226, 230, 0.808);
+    border: 1px rgb(100, 100, 100);
+    border-style:groove
 }
 
 .mdl-data-table {
@@ -85,6 +110,21 @@ body {background-color: pink;}
 .padding-top {
     padding: 10px 0 0;
 }
+
+.mm-score-desc {
+    font-size: medium;
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 95px;
+    margin-left: 95px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(248, 226, 230, 0.808);
+    box-shadow: inset;
+    border-color: #000;
+}
+
 /*test*/
 .horizontal-scale {
   position: relative;
@@ -105,4 +145,18 @@ body {background-color: pink;}
   position: absolute;
   top: 20px;
   transform: translateX(-50%);
+}
+
+.mm-recs-desc {
+    font-size: medium;
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 95px;
+    margin-left: 95px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(248, 226, 230, 0.808);
+    box-shadow: inset;
+    border-color: #000;
 }
