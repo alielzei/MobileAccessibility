@@ -4,7 +4,7 @@ $(document).ready(function(){
         event.preventDefault(); //stop errors from default form submission
         var responses = storeResponses(); //call store function
         var finalScore = calculateFinalScore(responses); //call calculation function
-        var percents = calculatePercents(responses)
+        var percents = calculatePercents(responses);
        // console.log(percents);
         //percents = { P1: 50, P2: 30, P3: 20 };
         var url = "final_score.html?P1=" + percents.P1 + "&P2=" + percents.P2 + "&P3=" + percents.P3;
@@ -21,10 +21,9 @@ function storeResponses() {
         //get index of checked elements for class name that matches current priority
         $('.P' + priority + ' input[type="checkbox"]').each(function (index, checkbox) {
             var itemName = 'item' + (index + 1);
-            responses['P' + priority][itemName] = checkbox.checked; //store value in dictionary if checked
+            responses['P' + priority][itemName] = checkbox.checked; //store value in dictionary true/false
         });
     }
-    console.log(responses);
     return responses;
 }
 
