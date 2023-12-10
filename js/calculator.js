@@ -3,11 +3,12 @@ $(document).ready(function(){
     $("form").on("submit", function(event) {
         event.preventDefault(); //stop errors from default form submission
         var responses = storeResponses(); //call store function
-        calculateFinalScore(responses); //call calculation function
+        var finalScore = calculateFinalScore(responses); //call calculation function
         var percents = calculatePercents(responses)
        // console.log(percents);
         //percents = { P1: 50, P2: 30, P3: 20 };
         var url = "final_score.html?P1=" + percents.P1 + "&P2=" + percents.P2 + "&P3=" + percents.P3;
+        url+= "&finalScore=" + finalScore;
         window.location.href = url;
         console.log(percents);
     });
@@ -48,6 +49,7 @@ function calculateFinalScore(responses) {
     //alert('Your final score is: ' + finalScore); //temp
     //var percent = (finalScore / totalScore) * 100;
     alert('Your final score is: ' + finalScore); //temp
+    return finalScore;
 }
 
 function calculatePercents(responses) {

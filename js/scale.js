@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Mock data
     var dataRange = [0, 50];
-    var userValue = 30;  // Replace this with the user's value
+    var urlParameter = new URLSearchParams(window.location.search)
+    var finalScore = parseFloat(urlParameter.get('finalScore')) || 0;
+    //var userValue = 30;  // Replace this with the user's value
     // Create a color scale
     var colorScale = d3.scaleSequential()
       .interpolator(d3.interpolateSpectral)  // Use a blue color scale for this example
@@ -48,9 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
       .call(axis);
 
   svg.append("line")
-      .attr("x1", x(userValue) + 3.5)
+      .attr("x1", x(finalScore) + 3.5)
       .attr("y1", 0)
-      .attr("x2", x(userValue) + 3.5)
+      .attr("x2", x(finalScore) + 3.5)
       .attr("y2", 20)
       .attr("stroke", "white")
       .attr("stroke-width", 2)
