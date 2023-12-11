@@ -92,22 +92,17 @@
       </section>
         
       <section class="mdl-grid center-items">
-        <!--ChatGPT Recommendations-->
+        <!--ChatGPT Recommendations
         <section class="mdl-layout-spacer"></section>
         <section class="mdl-cell mdl-cell--4-col">
           <script src="js/chatgpt.js"></script>
           <form>
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mm-gen-recs" onclick="generateRecommendations()">
-        <section class="mdl-cell mdl-cell--12-col">
-          <p class="mm-desc"><b>ChatGPT recs will go here!!</b></p>
-            <!--<button id="generateButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                Generate Recommendations
-            </button>-->
-            <section id="recommendationsSection" class="mdl-cell mdl-cell--12-col">
-              <p class="mm-desc"><b>ChatGPT Recommendations</b></p>
-              <div id="recommendations"></div>
+        -->
+          <section id="recommendationsSection" class="mdl-cell mdl-cell--12-col">
+              <p class="mm-desc"><b>ChatGPT Recommendations: </b></p>
+              <div id="recommendations" class="mdl-cell mdl-cell--12-col"></div>
           </section>
-        </section>
         <script>
           // Retrieve the recommendations from local storage
           var recommendations = localStorage.getItem('recommendations');

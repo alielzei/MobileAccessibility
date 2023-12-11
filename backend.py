@@ -27,8 +27,8 @@ def generate_recommendations():
             headers={'Authorization': f'Bearer {OPENAI_API_KEY}'},
             json={
                 'prompt':prompt,
-                'temperature':0.2,
-                'max_tokens':150
+                'temperature':0.7,
+                'max_tokens': 200
             }
         )
         print(response.json())
