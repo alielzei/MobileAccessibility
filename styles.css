@@ -71,8 +71,7 @@ body {background-color: rgb(252, 200, 209);}
     bottom: 0;
     margin-right: 100px;
     margin-left: 100px;
-    margin-bottom: 30px;
-    margin-top: 10px;
+    margin-bottom: 40px;
     z-index: 900;
     flex-direction: column;
 }
@@ -134,6 +133,7 @@ body {background-color: rgb(252, 200, 209);}
   transform: translateX(-50%);
 }
 
-.mm-gradient {
-    margin-left: 100px;
+.mm-gen-recs {
+    padding: 10px, 10px, 10px, 10px;
+    margin-left: 80px;
 }
