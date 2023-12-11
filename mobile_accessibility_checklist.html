@@ -57,10 +57,25 @@
             <tbody>
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p1item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p1item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Text Alternatives">
                             <input type="checkbox" id="p1item1" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                         </label>
+                        <script>
+                               /* itemId="p1item1"
+                                console.log('itemID: ', itemId)
+                                var label = $(`label[for="${itemId}"]`);
+                                console.log(label);
+                                var category = label.attr('title');
+                                 // Check if the category is found
+                                if (category) {
+                                    console.log('Name: ' + category);
+                                    //return category;
+                                } else {
+                                    console.error('NEW: Category not found for item: ' + itemId);
+                                   // return null;  // Handle the case where the category is not found
+                                } */
+                        </script>
                     </td>
                     <td class="mdl-data-table__cell--non-numeric">
                         <details>  
@@ -261,7 +276,7 @@
             <tbody>
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p2item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p2item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Consistent Content Structure">
                             <input type="checkbox" id="p2item1" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                         </label>
@@ -414,7 +429,7 @@
                 <tbody>
                     <tr>
                         <td class="mdl-data-table__cell--non-numeric">
-                            <label for="p3item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <label for="p3item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Logical Tab Order">
                                 <input type="checkbox" id="p3item1" class="mdl-checkbox__input" unchecked>
                                 <span class="mdl-checkbox__label"></span>
                             </label>
@@ -556,7 +571,7 @@
             
             <!--Submit Buton-->
             <form>
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="getCategoryName()">
                     Submit
                 </button>
             </form>
@@ -568,7 +583,47 @@
 
     <!--Final Score Calculation Script-->
     <script src="js/calculator.js"></script>
-
+    <script>
+        function getCategoryName() {
+            input_categories = [];
+            var uncheckedIDs = JSON.parse(localStorage.getItem('itemIDs'));
+            for (i = 0; i < uncheckedIDs.length; i++) {
+                console.log('itemID: ', uncheckedIDs[i]);
+                var label = $(`label[for="${uncheckedIDs[i]}"]`);
+                console.log(label);
+                var category = label.attr('title');
+                // Check if the category is found
+                if (category) {
+                    console.log('Name: ' + category);
+                    input_categories.push(category);
+                } else {
+                    console.error('NEW: Category not found for item: ' + itemId);
+                    return null;  // Handle the case where the category is not found
+                }
+            }
+        
+        console.log("RESULTS: ", input_categories);
+        localStorage.setItem('input_categories', JSON.stringify(input_categories));
+            //return input_categories;
+            // Make an AJAX request to your Python server
+        $.ajax({
+            type: 'POST',
+            url: 'http://127.0.0.1:5000/generate-recommendations',  // Update with your server's URL
+            contentType: 'application/json',
+            data: JSON.stringify({input_categories: input_categories}),
+            success: function(response) {
+                // Update your UI with the generated recommendations
+                var generatedText = response.generated_text;
+                // Modify this part to update your UI as needed
+                alert("Generated Recommendations: " + generatedText);
+            },
+            error: function(error) {
+                console.error('Error:', error.responseText);
+                // Handle errors gracefully in your UI
+            }
+        });
+    }
+    </script>
 </body>
 
 </html>

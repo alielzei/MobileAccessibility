@@ -5,12 +5,12 @@ $(document).ready(function(){
         var responses = storeResponses(); //call store function
         var finalScore = calculateFinalScore(responses); //call calculation function
         var percents = calculatePercents(responses);
-       // console.log(percents);
-        //percents = { P1: 50, P2: 30, P3: 20 };
+        localStorage.setItem('responses', JSON.stringify(responses));
         var url = "final_score.html?P1=" + percents.P1 + "&P2=" + percents.P2 + "&P3=" + percents.P3;
         url+= "&finalScore=" + finalScore;
         window.location.href = url;
-        console.log(percents);
+        //console.log(percents);
+        //console.log(responses)
     });
 });
 

@@ -1,46 +1,42 @@
-from flask import Flask, request, json, render_template
-import flask_cors
-import openai
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+import requests
+from config import OPENAI_API_KEY
+from openai import OpenAI
+import json
 
 app = Flask(__name__)
-flask_cors.CORS(app)  # Enable CORS for all routes
-@app.route('/')
-def index():
-    return render_template('final_score.html')
-@app.route('/generate_recommendation', methods=['POST'])
-def generate_recommendation():
-    data = request.json
-    unchecked_list = data.get("uncheckedItems", [])
-    openai.api_key = "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"  # Replace with your OpenAI API key
+CORS(app)
+ 
+OPENAI_API_ENDPOINT = 'https://api.openai.com/v1/engines/davinci/completions'
 
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": f"Generate recommendations based on unchecked items: {unchecked_list}"},
-        ]
-    )
-    chat_response = response['choices'][0]['message']['content']
-    return json.jsonify(chat_response=chat_response)
+@app.route('/generate-recommendations', methods=['POST'])
+def generate_recommendations():
+    try:
+        # Get data from the frontend request
+        data = request.get_json()
+        # Extract the relevant information for the OpenAI API call
+        input_categories = data.get('input_categories', [])
+        print("Input Categories:", input_categories) #debugging
+
+        prompt = f"Generate recommendations for improving mobile accessibility based on the following categories: {input_categories}"
+
+        response = requests.post(
+            OPENAI_API_ENDPOINT,
+            headers={'Authorization': f'Bearer {OPENAI_API_KEY}'},
+            json={
+                'prompt':prompt,
+                'temperature':0.5,
+                'max_tokens':150
+            }
+        )
+        #print(response.json())
+        generated_text = response.json()['choices'][0]['text']
+        return jsonify({'generated_text': generated_text})
+
+    except Exception as e:
+        print(e)
+        return jsonify({'error': str(e)}), 500
+ 
 if __name__ == '__main__':
-    app.run(debug=True)
-'''@app.route('/generate_recommendation', methods=['POST'])
-def chat():
-    data = request.json
-    unchecked_list = data.get("unchecked", [])
-    openai.api_key = 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
-        
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": f"Generate recommendations based on unchecked items: {unchecked_list}"},
-        ]
-    )
-
-    chat_response = response['choices'][0]['message']['content']
-    return json.jsonify(chat_response=chat_response)
-    pass
-
-if __name__ == '__main__':
-    app.run(debug=True) '''
+    app.run(port=5000,debug=True)
