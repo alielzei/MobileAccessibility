@@ -1,17 +1,17 @@
 //JavaScript helper functions which store user responses and calculate final score when user clicks submit
 $(document).ready(function(){
     $("form").on("submit", function(event) {
-        event.preventDefault(); //stop errors from default form submission
+        event.preventDefault();
         var responses = storeResponses(); //call store function
         var finalScore = calculateFinalScore(responses); //call calculation function
         var percents = calculatePercents(responses);
         localStorage.setItem('responses', JSON.stringify(responses));
         var url = "final_score.html?P1=" + percents.P1 + "&P2=" + percents.P2 + "&P3=" + percents.P3;
-        url+= "&finalScore=" + finalScore;
-        window.location.href = url;
+        url+= "&finalScore=" + finalScore;     
+        //window.location.href = url;
         //console.log(percents);
         //console.log(responses)
-    });
+    })
 });
 
 function storeResponses() {
@@ -46,6 +46,7 @@ function calculateFinalScore(responses) {
     }
     console.log('Final Score: ', finalScore);
     alert('Your final score is: ' + finalScore); //temp
+    //document.getElementById("finalScore").innerText = finalScore;
     return finalScore;
 }
 

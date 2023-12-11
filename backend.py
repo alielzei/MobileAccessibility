@@ -19,19 +19,21 @@ def generate_recommendations():
         input_categories = data.get('input_categories', [])
         print("Input Categories:", input_categories) #debugging
         input_categories_str = ', '.join(input_categories)
-        prompt = f"Give guidelines for improving mobile app accessibility for each category: {input_categories_str}"
-
+        print(input_categories_str)
+        prompt = f"Give guidelines for improving accessibilty in each category: {input_categories_str}"
+        print('Prompt', prompt)
         response = requests.post(
             OPENAI_API_ENDPOINT,
             headers={'Authorization': f'Bearer {OPENAI_API_KEY}'},
             json={
                 'prompt':prompt,
-                'temperature':0.5,
+                'temperature':0.2,
                 'max_tokens':150
             }
         )
         print(response.json())
         generated_text = response.json()['choices'][0]['text']
+        #print(generated_text)
         return jsonify({'generated_text': generated_text})
 
     except Exception as e:

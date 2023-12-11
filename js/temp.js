@@ -1,4 +1,6 @@
 /*
+$(document).ready(function(){
+    $("form").on("submit", function(event) {
 
 --------------------og chatgpt functions-----------------------------------
         function generateRecommendations() {
