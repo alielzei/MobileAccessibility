@@ -45,8 +45,6 @@ function calculateFinalScore(responses) {
         }
     }
     console.log('Final Score: ', finalScore);
-    //alert('Your final score is: ' + finalScore); //temp
-    //var percent = (finalScore / totalScore) * 100;
     alert('Your final score is: ' + finalScore); //temp
     return finalScore;
 }

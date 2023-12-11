@@ -18,8 +18,8 @@ def generate_recommendations():
         # Extract the relevant information for the OpenAI API call
         input_categories = data.get('input_categories', [])
         print("Input Categories:", input_categories) #debugging
-
-        prompt = f"Generate recommendations for improving mobile accessibility based on the following categories: {input_categories}"
+        input_categories_str = ', '.join(input_categories)
+        prompt = f"Give guidelines for improving mobile app accessibility for each category: {input_categories_str}"
 
         response = requests.post(
             OPENAI_API_ENDPOINT,
@@ -30,7 +30,7 @@ def generate_recommendations():
                 'max_tokens':150
             }
         )
-        #print(response.json())
+        print(response.json())
         generated_text = response.json()['choices'][0]['text']
         return jsonify({'generated_text': generated_text})
 
