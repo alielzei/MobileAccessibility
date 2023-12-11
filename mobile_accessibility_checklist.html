@@ -14,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title> MaximMobile: Mobile App Accessibility Checklist </title>
+    
 </head>
 
 <body>
@@ -58,7 +59,7 @@
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
                         <label for="p1item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Text Alternatives">
-                            <input type="checkbox" id="p1item1" class="mdl-checkbox__input" unchecked>
+                            <input type="checkbox" id="p1item1" name="Text Alternatives" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                         </label>
                     </td>
@@ -262,7 +263,7 @@
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
                         <label for="p2item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Consistent Content Structure">
-                            <input type="checkbox" id="p2item1" class="mdl-checkbox__input" unchecked>
+                            <input type="checkbox" id="p2item1" name="Consistent Content Structure" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                         </label>
                     </td>
@@ -415,7 +416,7 @@
                     <tr>
                         <td class="mdl-data-table__cell--non-numeric">
                             <label for="p3item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Logical Tab Order">
-                                <input type="checkbox" id="p3item1" class="mdl-checkbox__input" unchecked>
+                                <input type="checkbox" id="p3item1" name="Logical Tab Order" class="mdl-checkbox__input" unchecked>
                                 <span class="mdl-checkbox__label"></span>
                             </label>
                         </td>
@@ -556,7 +557,7 @@
             
             <!--Submit Buton-->
             <form>
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="getCategoryName()">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="getUncheckedCategories()">
                     Submit
                 </button>
             </form>
@@ -566,9 +567,111 @@
 
     </main>
 
-    <!--Final Score Calculation Script-->
+    <!--Final Score Calculation Script
+    <script>
+        // script.js
+ 
+         function getUncheckedCategories() {
+            event.preventDefault(); 
+            var uncheckedCategories = [];
+ 
+             // Get all checkboxes with class 'mdl-checkbox__input'
+             var checkboxes = document.querySelectorAll('.mdl-checkbox__input');
+ 
+             // Loop through checkboxes to find unchecked ones
+             checkboxes.forEach(function(checkbox) {
+                 if (!checkbox.checked) {
+                     // Extract category name from checkbox id
+                     var categoryName = checkbox.getAttribute('name');
+                     uncheckedCategories.push(categoryName);
+                 }
+             });
+             //console.log('Unchecked Categories:', uncheckedCategories);
+             // Pass unchecked categories to the backend
+             localStorage.setItem('categories', JSON.stringify(uncheckedCategories));
+             sendCategoriesToBackend(uncheckedCategories);
+         }
+ 
+         function sendCategoriesToBackend(uncheckedCategories) {
+             // Use AJAX to send data to the backend
+             console.log("Unchecked Categories" , uncheckedCategories);
+             $.ajax({
+                 type: 'POST',
+                 url: 'http://127.0.0.1:5000/generate-recommendations', // Update this with your backend endpoint
+                 contentType: 'application/json',
+                 data: JSON.stringify({ input_categories: uncheckedCategories }),
+                 success: function(response) {
+                    console.log("data", response.generated_text);
+                    var generated_text = response.generated_text;
+                    localStorage.setItem('recommendations', generated_text);
+                    window.location.href = 'loading.html';
+                 },
+                 error: function(error) {
+                     console.error('Error sending data to backend:', error);
+                 }
+             });
+         }
+     </script>
+    <script src="js/calculator.js"></script> -->
+
+    <script>
+        function getUncheckedCategories() {
+            var uncheckedCategories = [];
+    
+            // Get all checkboxes with class 'mdl-checkbox__input'
+            var checkboxes = document.querySelectorAll('.mdl-checkbox__input');
+    
+            // Loop through checkboxes to find unchecked ones
+            checkboxes.forEach(function(checkbox) {
+                if (!checkbox.checked) {
+                    // Extract category name from checkbox id
+                    var categoryName = checkbox.getAttribute('name');
+                    uncheckedCategories.push(categoryName);
+                }
+            });
+    
+            // Pass unchecked categories to the backend
+            localStorage.setItem('categories', JSON.stringify(uncheckedCategories));
+            sendCategoriesToBackend(uncheckedCategories, function(recommendations) {
+                // Callback when recommendations are ready
+                localStorage.setItem('recommendations', recommendations);
+                redirectToFinalScore();
+            });
+        }
+    
+        function sendCategoriesToBackend(uncheckedCategories, callback) {
+            // Use AJAX to send data to the backend
+            console.log("Unchecked Categories", uncheckedCategories);
+            $.ajax({
+                type: 'POST',
+                url: 'http://127.0.0.1:5000/generate-recommendations', // Update this with your backend endpoint
+                contentType: 'application/json',
+                data: JSON.stringify({ input_categories: uncheckedCategories }),
+                success: function(response) {
+                    console.log("data", response.generated_text);
+                    var generated_text = response.generated_text;
+                    if (callback && typeof callback === 'function') {
+                        callback(generated_text);
+                    }
+                },
+                error: function(error) {
+                    console.error('Error sending data to backend:', error);
+                }
+            });
+        }
+    
+        function redirectToFinalScore() {
+            var responses = storeResponses(); // Call store function
+            var finalScore = calculateFinalScore(responses); // Call calculation function
+            var percents = calculatePercents(responses);
+            localStorage.setItem('responses', JSON.stringify(responses));
+            var url = "final_score.html?P1=" + percents.P1 + "&P2=" + percents.P2 + "&P3=" + percents.P3;
+            url += "&finalScore=" + finalScore;
+            window.location.href = url;
+        }
+    </script>
     <script src="js/calculator.js"></script>
-    <script src="js/chatgpt.js"></script>
+    <script src="js/scale.js"></script>
 </body>
 
 </html>
