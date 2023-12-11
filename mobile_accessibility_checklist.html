@@ -13,7 +13,7 @@
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title> MAXIMMOBILE: Mobile App Accessibility Checklist </title>
+    <title> MaximMobile: Mobile App Accessibility Checklist </title>
 </head>
 
 <body>
@@ -22,8 +22,8 @@
             <header class="mdl-layout__header mdl-layout__header--waterfall mm-header">
                 <!--Only Visible at top of page-->
                 <section class="mdl-layout__header-row mm-logo-row">
-                    <span class="mm-layout__title"></span>
-                        <section class="mm-logo"></section>
+                    <section class="mm-logo"></section>
+                    <span class="mm-layout__title">MaximMobile: A Mobile Accessibilty Checklist</span>
                     <section class="mdl-layout-spacer"></section>
                     <section class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
                         <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp"> Click On For More Info</label>
@@ -37,15 +37,12 @@
             </header>
 
         <main class="mdl-layout__content">
-            <table class="mdl-data-table mdl-js-data-table">
-                <tbody>
-                    <td class="mdl-data-table__cell--non-numeric">
-                        <p><b>Description</b>: This website provides a list of all checkpoints from WCAG guidelines. 
-                            They are separated by priority based on the item's impact of user accessibility. 
-                            For each checkpoint, indicate if the item is present.</p>
-                    </td>
-                </tbody>
-            </table>
+
+            <section class="mdl-cell mdl-cell--12-col">
+                <p class="mm-desc"><b>Instructions</b>: This website provides a list of all checkpoints from WCAG guidelines. 
+                  They are separated by priority based on the item's impact of user accessibility. 
+                  For each checkpoint, indicate whether the item is present, not present, or not applicable.</p>
+            </section>
                 
             <!--Priority 1 Table-->
             <section class="P1">
@@ -60,7 +57,7 @@
             <tbody>
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p1item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p1item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Text Alternatives">
                             <input type="checkbox" id="p1item1" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                             Click To Select
@@ -82,7 +79,7 @@
 
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p1item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p1item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Descriptive Labels">
                             <input type="checkbox" id="p1item2" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                             Click To Select
@@ -103,7 +100,7 @@
 
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p1item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p1item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Multimodal Touch Screen Gestures">
                             <input type="checkbox" id="p1item3" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                             Click To Select
@@ -124,7 +121,7 @@
 
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p1item4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p1item4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Context-Sensitive Help">
                             <input type="checkbox" id="p1item4" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                             Click To Select
@@ -146,7 +143,7 @@
 
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p1item5" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p1item5" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Ease of Seeing Content">
                             <input type="checkbox" id="p1item5" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                             Click To Select
@@ -171,7 +168,7 @@
 
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p1item6" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p1item6" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Ease of Hearing Content">
                             <input type="checkbox" id="p1item6" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                             Click To Select
@@ -195,7 +192,7 @@
 
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p1item7" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p1item7" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Intuitive Navigation">
                             <input type="checkbox" id="p1item7" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                             Click To Select
@@ -217,7 +214,7 @@
 
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p1item8" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p1item8" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Screen Adaptability">
                             <input type="checkbox" id="p1item8" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                         </label>
@@ -238,7 +235,7 @@
 
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p1item9" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p1item9" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Photosensitivity Management">
                             <input type="checkbox" id="p1item9" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                         </label>
@@ -271,7 +268,7 @@
             <tbody>
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p2item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p2item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Consistent Content Structure">
                             <input type="checkbox" id="p2item1" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                         </label>
@@ -291,7 +288,7 @@
 
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p2item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p2item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Text Resizable">
                             <input type="checkbox" id="p2item2" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                         </label>
@@ -311,7 +308,7 @@
 
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p2item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p2item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Captions for Audio/Video">
                             <input type="checkbox" id="p2item3" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                         </label>
@@ -330,7 +327,7 @@
 
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p2item4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p2item4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Error Suggestion">
                             <input type="checkbox" id="p2item4" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                         </label>
@@ -350,7 +347,7 @@
 
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p2item5" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p2item5" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Equivalent Accessible Alternatives">
                             <input type="checkbox" id="p2item5" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                         </label>
@@ -369,7 +366,7 @@
 
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p2item6" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p2item6" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Indicative Guides">
                             <input type="checkbox" id="p2item6" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                         </label>
@@ -390,7 +387,7 @@
 
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <label for="p2item7" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <label for="p2item7" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Multiple Ways to Access Content">
                             <input type="checkbox" id="p2item7" class="mdl-checkbox__input" unchecked>
                             <span class="mdl-checkbox__label"></span>
                         </label>
@@ -424,7 +421,7 @@
                 <tbody>
                     <tr>
                         <td class="mdl-data-table__cell--non-numeric">
-                            <label for="p3item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <label for="p3item1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Logical Tab Order">
                                 <input type="checkbox" id="p3item1" class="mdl-checkbox__input" unchecked>
                                 <span class="mdl-checkbox__label"></span>
                             </label>
@@ -443,7 +440,7 @@
 
                     <tr>
                         <td class="mdl-data-table__cell--non-numeric">
-                            <label for="p3item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <label for="p3item2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Consistent Navigation Labeling">
                                 <input type="checkbox" id="p3item2" class="mdl-checkbox__input" unchecked>
                                 <span class="mdl-checkbox__label"></span>
                             </label>
@@ -462,7 +459,7 @@
 
                     <tr>
                         <td class="mdl-data-table__cell--non-numeric">
-                            <label for="p3item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <label for="p3item3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Replacements for Device Manipulation Gestures">
                                 <input type="checkbox" id="p3item3" class="mdl-checkbox__input" unchecked>
                                 <span class="mdl-checkbox__label"></span>
                             </label>
@@ -483,7 +480,7 @@
 
                     <tr>
                         <td class="mdl-data-table__cell--non-numeric">
-                            <label for="p3item4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <label for="p3item4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Descriptions of Accessibility Features">
                                 <input type="checkbox" id="p3item4" class="mdl-checkbox__input" unchecked>
                                 <span class="mdl-checkbox__label"></span>
                             </label>
@@ -502,7 +499,7 @@
 
                     <tr>
                         <td class="mdl-data-table__cell--non-numeric">
-                            <label for="p3item5" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <label for="p3item5" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Changes Between Versions">
                                 <input type="checkbox" id="p3item5" class="mdl-checkbox__input" unchecked>
                                 <span class="mdl-checkbox__label"></span>
                             </label>
@@ -523,7 +520,7 @@
 
                     <tr>
                         <td class="mdl-data-table__cell--non-numeric">
-                            <label for="p3item6" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <label for="p3item6" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Display Corresponding Virtual Keyboard Per Data Entry Type">
                                 <input type="checkbox" id="p3item6" class="mdl-checkbox__input" unchecked>
                                 <span class="mdl-checkbox__label"></span>
                             </label>
@@ -543,7 +540,7 @@
 
                     <tr>
                         <td class="mdl-data-table__cell--non-numeric">
-                            <label for="p3item7" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <label for="p3item7" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" title="Customizable User Interface Settings">
                                 <input type="checkbox" id="p3item7" class="mdl-checkbox__input" unchecked>
                                 <span class="mdl-checkbox__label"></span>
                             </label>
@@ -566,7 +563,7 @@
             
             <!--Submit Buton-->
             <form>
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="getCategoryName()">
                     Submit
                 </button>
             </form>
@@ -578,7 +575,7 @@
 
     <!--Final Score Calculation Script-->
     <script src="js/calculator.js"></script>
-
+    <script src="js/chatgpt.js"></script>
 </body>
 
 </html>

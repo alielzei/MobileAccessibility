@@ -3,15 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <title> MAXIMMOBILE: Mobile App Accessibility Checklist </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="MaximMobile - A Mobile Accessibilty Checklist">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/calculator.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/chart.js"></script>
-    <link rel="stylesheet" href="styles.css">
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="js/scale.js"></script>
+    <title> MaximMobile: Mobile App Accessibility Checklist </title>
+
     <script>
         $(document).ready(function(){
             var urlParameters = new URLSearchParams(window.location.search);
@@ -31,167 +37,75 @@
                 createChart(percents, canvas.getContext('2d'));
             }
         });
-    </script>
+    </script> 
 </head>
 
 <body>
-    <p><b>Description</b>: This website provides a list of all checkpoints from WCAG guidelines. 
-        They are separated by priority based on the item's impact of user accessibility. 
-        For each checkpoint, indicate whether the item is present, not present, or not applicable.</p>
-    
-    <input class="mdl-slider mdl-js-slider" type="range"
-    min="0" max="100" value="25" tabindex="0" disabled>
-    <svg id="scale" width="200" height="40"></svg>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          // Mock data
-          var dataRange = [0, 50];
-          var userValue = 30;  // Replace this with the user's value
-          // Create a color scale
-          var colorScale = d3.scaleSequential()
-            .interpolator(d3.interpolateSpectral)  // Use a blue color scale for this example
-            .domain(dataRange);
-    
-          // Create SVG container
-          var svg = d3.select("#scale");
-    
-          // Define gradient
-          var defs = svg.append("defs");
-          var linearGradient = defs.append("linearGradient")
-            .attr("id", "linear-gradient");
-    
-          // Add gradient stops
-          linearGradient.selectAll("stop")
-            .data(colorScale.range())
-            .enter().append("stop")
-            .attr("offset", function (d, i) {
-              return i / (colorScale.range().length - 1);
-            })
-            .attr("stop-color", function (d) {
-              return d;
-            });
-    
-          // Create rectangular legend with gradient fill
-          svg.append("rect")
-            .attr("width", 198)
-            .attr("height", 20)
-            .attr('stroke', 'black')
-            .style("fill", "url(#linear-gradient)");
-    
-          // Set up scale and axis
-          var x = d3.scaleLinear()
-            .domain(dataRange)
-            .range([0, 190]);
-    
-          var axis = d3.axisBottom(x);
-          axis.ticks(5);
-    
-          // Render axis
-          svg.append("g")
-            .attr("class", "axis")
-            .attr("transform", "translate(3,20)")
-            .call(axis);
+  <section class="mdl-layout__container">
+    <section class="mdl-layout mdl-js-layout mm-layout-waterfall">
+    <header class="mdl-layout__header mdl-layout__header--waterfall mm-header">
+      <!--Only Visible at top of page-->
+      <section class="mdl-layout__header-row mm-logo-row">
+        <section class="mm-logo"></section>
+        <span class="mm-layout__title">MaximMobile: Accessibility Score</span>
+        <section class="mdl-layout-spacer"></section>
+        <section class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+          <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp"></label>
+            <section class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp">
+            </section>
+        </section>
+      </section>
+      <!--Always Visible-->
+      <section class="mdl-layout__header-row mm-logo-row"></section>
+    </header>
 
-        svg.append("line")
-            .attr("x1", x(userValue) + 3.5)
-            .attr("y1", 0)
-            .attr("x2", x(userValue) + 3.5)
-            .attr("y2", 20)
-            .attr("stroke", "white")
-            .attr("stroke-width", 2)
-            .attr("stroke-dasharray", "5,5"); // Optional: add a dash array for styling
-        });
-      </script>
-  
-    <canvas id="PrioritiesChart" width="100" height="100"></canvas>
+    <main class="mdl-layout__content">
+
+      <section class="mdl-grid">
+        <section class="mdl-cell mdl-cell--12-col">
+          <!--TODO: print final score and get rid of the little alert-->
+          <p class="mm-desc"><b>Final Score:</b></p>
+        </section>
+      </section>
+      
+      <section class="mdl-grid center-items">
+        <!--Gradient Range-->
+        <section class="mdl-layout-spacer"></section>
+        <section class="mdl-cell mdl-cell--4-col mm-gradient">
+          <svg id="scale" width="200" height="40"></svg>
+          <script src="js/scale.js"></script> 
+          <p class="mm-desc">Gradient Range Description</p>
+        </section>
+        <section class="mdl-layout-spacer"></section>
+      </section>
+
+      <section class="mdl-grid center-items">
+        <!--Pie Chart-->
+        <section class="mdl-layout-spacer"></section>
+        <section class="mdl-cell mdl-cell--4-col mm-piechart">
+          <canvas id="PrioritiesChart" width="50" height="50"></canvas>
+          <p class="mm-desc">Pie Chart Table Description</p>
+        </section>
+        <section class="mdl-layout-spacer"></section>
+      </section>
+        
+      <section class="mdl-grid center-items">
+        <!--ChatGPT Recommendations-->
+        <section class="mdl-layout-spacer"></section>
+        <section class="mdl-cell mdl-cell--4-col">
+          <script src="js/chatgpt.js"></script>
+          <form>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mm-gen-recs" onclick="generateRecommendations()">
+                Generate Recommendations
+            </button>
+          </form>
+        </section>
+        <section class="mdl-layout-spacer"></section>
+      </section>
+
+    </main>
+    </section>
+  </section>
 </body>
-
-
 </html>
-
-<!--
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>MAXIMMOBILE: Mobile App Accessibility Checklist</title>
-    <SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="$$hosted_libs_prefix$$/$$version$$/material.cyan-light_blue.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
-    </style>
-  </head>
-  <body>
-      <main class="mdl-layout__content mdl-color--grey-100">
-        <div class="mdl-grid demo-content">
-          <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-            <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
-              <use xlink:href="#piechart" mask="url(#piemask)" />
-              <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle" dy="0.1">82<tspan font-size="0.2" dy="-0.07">%</tspan></text>
-            </svg>
-            <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
-              <use xlink:href="#piechart" mask="url(#piemask)" />
-              <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle" dy="0.1">82<tspan dy="-0.07" font-size="0.2">%</tspan></text>
-            </svg>
-            <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
-              <use xlink:href="#piechart" mask="url(#piemask)" />
-              <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle" dy="0.1">82<tspan dy="-0.07" font-size="0.2">%</tspan></text>
-            </svg>
-            <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
-              <use xlink:href="#piechart" mask="url(#piemask)" />
-              <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle" dy="0.1">82<tspan dy="-0.07" font-size="0.2">%</tspan></text>
-            </svg>
-          </div>
-      </main>
-    </div>
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="position: fixed; left: -1000px; height: -1000px;">
-        <defs>
-          <mask id="piemask" maskContentUnits="objectBoundingBox">
-            <circle cx=0.5 cy=0.5 r=0.49 fill="white" />
-            <circle cx=0.5 cy=0.5 r=0.40 fill="black" />
-          </mask>
-          <g id="piechart">
-            <circle cx=0.5 cy=0.5 r=0.5 />
-            <path d="M 0.5 0.5 0.5 0 A 0.5 0.5 0 0 1 0.95 0.28 z" stroke="none" fill="rgba(255, 255, 255, 0.75)" />
-          </g>
-        </defs>
-      </svg>
-  </body>
-</html>
-<script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const scaleContainer = document.getElementById('horizontalScale');
-  
-        // Set the number of ticks and labels
-        const numberOfTicks = 5;
-  
-        for (let i = 0; i < numberOfTicks; i++) {
-          const tick = document.createElement('div');
-          tick.className = 'tick';
-          tick.style.left = `${(i / (numberOfTicks - 1)) * 100}%`;
-          scaleContainer.appendChild(tick);
-  
-          const label = document.createElement('div');
-          label.className = 'label';
-          label.textContent = i * 20; // Adjust labels as needed
-          label.style.left = `${(i / (numberOfTicks - 1)) * 100}%`;
-          scaleContainer.appendChild(label);
-        }
-      });
-    </script>
--->

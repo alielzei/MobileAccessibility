@@ -3,13 +3,14 @@ $(document).ready(function(){
     $("form").on("submit", function(event) {
         event.preventDefault(); //stop errors from default form submission
         var responses = storeResponses(); //call store function
-        calculateFinalScore(responses); //call calculation function
-        var percents = calculatePercents(responses)
-       // console.log(percents);
-        //percents = { P1: 50, P2: 30, P3: 20 };
+        var finalScore = calculateFinalScore(responses); //call calculation function
+        var percents = calculatePercents(responses);
+        localStorage.setItem('responses', JSON.stringify(responses));
         var url = "final_score.html?P1=" + percents.P1 + "&P2=" + percents.P2 + "&P3=" + percents.P3;
+        url+= "&finalScore=" + finalScore;
         window.location.href = url;
-        console.log(percents);
+        //console.log(percents);
+        //console.log(responses)
     });
 });
 
@@ -20,10 +21,9 @@ function storeResponses() {
         //get index of checked elements for class name that matches current priority
         $('.P' + priority + ' input[type="checkbox"]').each(function (index, checkbox) {
             var itemName = 'item' + (index + 1);
-            responses['P' + priority][itemName] = checkbox.checked; //store value in dictionary if checked
+            responses['P' + priority][itemName] = checkbox.checked; //store value in dictionary true/false
         });
     }
-    console.log(responses);
     return responses;
 }
 
@@ -45,9 +45,8 @@ function calculateFinalScore(responses) {
         }
     }
     console.log('Final Score: ', finalScore);
-    //alert('Your final score is: ' + finalScore); //temp
-    //var percent = (finalScore / totalScore) * 100;
     alert('Your final score is: ' + finalScore); //temp
+    return finalScore;
 }
 
 function calculatePercents(responses) {
