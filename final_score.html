@@ -63,39 +63,34 @@
 
     <main class="mdl-layout__content">
 
-      <section class="mdl-cell mdl-cell--12-col">
-        <p class="mm-desc"><b>This website provides a list of all checkpoints from WCAG guidelines. 
-          They are separated by priority based on the item's impact of user accessibility. 
-          For each checkpoint, indicate whether the item is present, not present, or not applicable.</b></p>
+      <section class="mdl-grid">
+        <section class="mdl-cell mdl-cell--12-col">
+          <!--TODO: print final score and get rid of the little alert-->
+          <p class="mm-desc"><b>Final Score:</b></p>
         </section>
+      </section>
       
       <section class="mdl-grid">
-        <!--Slider-->
-        <section class="mdl-cell mdl-cell--4-col">
-          <input class="mdl-slider mdl-js-slider" type="range"
-          min="0" max="100" value="25" tabindex="0" disabled>
-        </section>
-
         <!--Gradient Range-->
-        <section class="mdl-cell mdl-cell--2col">
+        <section class="mdl-cell mdl-cell--4-col mm-gradient">
           <svg id="scale" width="200" height="40"></svg>
           <script src="js/scale.js"></script> 
         </section>
         
         <!--Pie Chart-->
         <section class="mdl-cell mdl-cell--4-col mm-piechart">
-          <canvas id="PrioritiesChart" width="100" height="100"></canvas>
+          <canvas id="PrioritiesChart" width="50" height="50"></canvas>
         </section>
-      
+        
         <!--ChatGPT Recommendations-->
-        <section class="mdl-cell mdl-cell--12-col">
-          <p class="mm-desc"><b>ChatGPT recs will go here!!</b></p>
+        <section class="mdl-cell mdl-cell--4-col">
           <form>
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="generateRecommendations()">
                 Generate Recommendations
             </button>
-        </form>
+          </form>
         </section>
+
       </section>
 
     </main>
