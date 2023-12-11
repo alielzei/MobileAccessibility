@@ -1,4 +1,4 @@
-body {background-color: pink;}
+body {background-color: rgb(252, 200, 209);}
 
 .P1 {margin-bottom: 20px;}
 
@@ -83,6 +83,7 @@ body {background-color: pink;}
     word-wrap: normal;
     word-break: normal;
     text-wrap: wrap;
+    width: 100%;
 }
 
 .mdl-data-table td:first-child {
@@ -111,20 +112,6 @@ body {background-color: pink;}
     padding: 10px 0 0;
 }
 
-.mm-score-desc {
-    font-size: medium;
-    padding: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-right: 95px;
-    margin-left: 95px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: rgba(248, 226, 230, 0.808);
-    box-shadow: inset;
-    border-color: #000;
-}
-
 /*test*/
 .horizontal-scale {
   position: relative;
@@ -147,16 +134,6 @@ body {background-color: pink;}
   transform: translateX(-50%);
 }
 
-.mm-recs-desc {
-    font-size: medium;
-    padding: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-right: 95px;
-    margin-left: 95px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: rgba(248, 226, 230, 0.808);
-    box-shadow: inset;
-    border-color: #000;
+.mm-gradient {
+    margin-left: 100px;
 }
