@@ -1,4 +1,8 @@
-body {background-color: rgb(252, 200, 209);}
+body {
+    background-color: rgb(252, 200, 209);
+    height: 100%;
+    margin: 0;
+}
 
 .P1 {margin-bottom: 20px;}
 
@@ -192,6 +196,14 @@ body {background-color: rgb(252, 200, 209);}
 
 }
 
+.loader-container {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 .spinner {
     border: 8px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
@@ -200,6 +212,9 @@ body {background-color: rgb(252, 200, 209);}
     height: 80px;
     animation: spin 1s linear infinite;
     position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes spin {
