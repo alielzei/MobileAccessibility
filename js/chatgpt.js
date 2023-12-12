@@ -1,6 +1,6 @@
 function getUncheckedCategories() {
     var uncheckedCategories = [];
-
+    showLoading();
     // Get all checkboxes with class 'mdl-checkbox__input'
     var checkboxes = document.querySelectorAll('.mdl-checkbox__input');
 
@@ -18,6 +18,7 @@ function getUncheckedCategories() {
     sendCategoriesToBackend(uncheckedCategories, function(recommendations) {
         // Callback when recommendations are ready
         localStorage.setItem('recommendations', recommendations);
+        hideLoading(); // Hide loading spinner or message
         redirectToFinalScore();
     });
 }
@@ -55,4 +56,18 @@ function redirectToFinalScore() {
     var url = "final_score.html?P1=" + percents.P1 + "&P2=" + percents.P2 + "&P3=" + percents.P3;
     url += "&finalScore=" + finalScore;
     window.location.href = url;
+}
+
+function showLoading() {
+    // Implement code to show loading spinner or message
+    // For example, display a loading div on the page
+    var loadingDiv = document.getElementById('loading');
+    loadingDiv.style.display = 'block';
+}
+
+function hideLoading() {
+    // Implement code to hide loading spinner or message
+    // For example, hide the loading div on the page
+    var loadingDiv = document.getElementById('loading');
+    loadingDiv.style.display = 'none';
 }
