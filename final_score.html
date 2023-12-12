@@ -66,7 +66,7 @@
       <section class="mdl-grid">
         <section class="mdl-cell mdl-cell--12-col">
           <!--TODO: print final score and get rid of the little alert-->
-          <p class="mm-desc"><b>Final Score:</b> <span id="finalScorePlaceholder"></span></p>
+          <p class="mm-desc"><b>Your Final Accessibility Score:</b> <span id="finalScorePlaceholder"></span>/50</p>
           <script>
             // Function to get URL parameters by name
             function getParameterByName(name, url) {
@@ -95,31 +95,44 @@
         <section class="mdl-cell mdl-cell--4-col mm-gradient">
           <svg id="scale" width="200" height="40"></svg>
           <script src="js/scale.js"></script> 
-          <p class="mm-desc">This gradient quantifies your application's accessibility based on a formula we devised upon the helpfulness of each checklist item </p>
         </section>
         <section class="mdl-layout-spacer"></section>
       </section>
+
+      <section class="mdl-grid center-items">
+        <!--Gradient Description-->
+        <section class="mdl-layout-spacer"></section>
+        <section class="mdl-cell mdl-cell--6-col mm-gradient">
+          <p class="mm-desc">This gradient quantifies your application's accessibility based on a formula we devised upon the helpfulness of each checklist item.</p>
+        </section>
+        <section class="mdl-layout-spacer"></section>
+      </section>
+
 
       <section class="mdl-grid center-items">
         <!--Pie Chart-->
         <section class="mdl-layout-spacer"></section>
         <section class="mdl-cell mdl-cell--4-col mm-piechart">
           <canvas id="PrioritiesChart" width="50" height="50"></canvas>
-          <p class="mm-desc">This pie chart illustrates the percentage that each accessibility section makes up in your website's accessibility checklist</p>
+          
+        </section>
+        <section class="mdl-layout-spacer"></section>
+      </section>
+
+      <section class="mdl-grid center-items">
+        <!--Pie Chart Description-->
+        <section class="mdl-layout-spacer"></section>
+        <section class="mdl-cell mdl-cell--6-col mm-gradient">
+          <p class="mm-desc">This pie chart illustrates the percentage that each accessibility section makes up in your accessibility checklist.
+                             Hover over a section of the pie chart to view the corresponding percentage for any priority of your choice. 
+          </p>
         </section>
         <section class="mdl-layout-spacer"></section>
       </section>
         
       <section class="mdl-grid center-items">
-        <!--ChatGPT Recommendations
-        <section class="mdl-layout-spacer"></section>
-        <section class="mdl-cell mdl-cell--4-col">
-          <script src="js/chatgpt.js"></script>
-          <form>
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mm-gen-recs" onclick="generateRecommendations()">
-        -->
           <section id="recommendationsSection" class="mdl-cell mdl-cell--12-col">
-              <p class="mm-desc"><b>Generated Recommendations for Accessibilility Improvement </b></p>
+              <p class="mm-gen-recs"><b>Generated Recommendations for Accessibilility Improvement </b></p>
               <div id="recommendations" class="mdl-cell mdl-cell--12-col"></div>
           </section>
 
@@ -131,7 +144,6 @@
           if (recommendations !== null) {
               // Process or display recommendations as needed
               document.getElementById('recommendations').innerText = recommendations;
-              document.getElementById('recommendations').style.backgroundColor = "rgb(248, 226, 230)";
               
               // Clear the stored recommendation data in local storage
               localStorage.removeItem('recommendations');
