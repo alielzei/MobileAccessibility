@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mock data
     var dataRange = [0, 50];
     var urlParameter = new URLSearchParams(window.location.search)
     var finalScore = parseFloat(urlParameter.get('finalScore')) || 0;
@@ -33,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
       .attr("width", 198)
       .attr("height", 20)
       .attr('stroke', 'black')
-      .style("fill", "url(#linear-gradient)");
+      .style("fill", "url(#linear-gradient)")
+      .attr("class", "scale-rect");
 
     // Set up scale and axis
     var x = d3.scaleLinear()

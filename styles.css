@@ -164,3 +164,9 @@ body {background-color: rgb(252, 200, 209);}
   .axis line, .axis path {
     stroke-width: 2px; /* Adjust the stroke width of the axis lines and paths */
   }
+  
+  #scale{
+    scale: 200%;
+    margin: auto;
+    width: 50%;
+  }
