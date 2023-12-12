@@ -1,22 +1,21 @@
+//Javascript helper function to generate final score scale + marker
 document.addEventListener('DOMContentLoaded', () => {
-    var dataRange = [0, 50];
-    var urlParameter = new URLSearchParams(window.location.search)
+    var dataRange = [0, 50]; //fixed score
+    var urlParameter = new URLSearchParams(window.location.search) //get final score from URL storage
     var finalScore = parseFloat(urlParameter.get('finalScore')) || 0;
-    //var userValue = 30;  // Replace this with the user's value
-    // Create a color scale
     var colorScale = d3.scaleSequential()
-      .interpolator(d3.interpolateSpectral)  // Use a blue color scale for this example
-      .domain(dataRange);
+      .interpolator(d3.interpolateSpectral)  //define colors
+      .domain(dataRange); 
 
-    // Create SVG container
+    // create SVG
     var svg = d3.select("#scale");
 
-    // Define gradient
+    // define gradient
     var defs = svg.append("defs");
     var linearGradient = defs.append("linearGradient")
       .attr("id", "linear-gradient");
 
-    // Add gradient stops
+    // add gradient stops for colors
     linearGradient.selectAll("stop")
       .data(colorScale.range())
       .enter().append("stop")
@@ -27,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return d;
       });
 
-    // Create rectangular legend with gradient fill
+    // rectangular legend
     svg.append("rect")
       .attr("width", 198)
       .attr("height", 20)
@@ -35,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .style("fill", "url(#linear-gradient)")
       .attr("class", "scale-rect");
 
-    // Set up scale and axis
+    // scale and axis, tixs defined
     var x = d3.scaleLinear()
       .domain(dataRange)
       .range([0, 190]);
@@ -43,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var axis = d3.axisBottom(x);
     axis.ticks(5);
 
-    // Render axis
+    // render axis
     svg.append("g")
       .attr("class", "axis")
       .attr("transform", "translate(3,20)")
@@ -56,5 +55,5 @@ document.addEventListener('DOMContentLoaded', () => {
       .attr("y2", 20)
       .attr("stroke", "white")
       .attr("stroke-width", 2)
-      .attr("stroke-dasharray", "5,5"); // Optional: add a dash array for styling
+      .attr("stroke-dasharray", "5,5"); // add dash indicator for user input
   });

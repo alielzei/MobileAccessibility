@@ -1,3 +1,4 @@
+//JavaScript function to generate the final priorities chart
 function createChart(priorityPercents, ctx){
     var data = {
         labels: ['Priority 1', 'Priority 2', 'Priority 3'],
