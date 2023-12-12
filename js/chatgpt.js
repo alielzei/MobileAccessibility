@@ -46,6 +46,10 @@ function sendCategoriesToBackend(uncheckedCategories, callback) {
 function redirectToFinalScore() {
     var responses = storeResponses(); // Call store function
     var finalScore = calculateFinalScore(responses); // Call calculation function
+    if (finalScore === 0) {
+        alert('ERROR: Please check at least one checkbox before proceeding.');
+        return; // Stop further execution
+    }
     var percents = calculatePercents(responses);
     localStorage.setItem('responses', JSON.stringify(responses));
     var url = "final_score.html?P1=" + percents.P1 + "&P2=" + percents.P2 + "&P3=" + percents.P3;
