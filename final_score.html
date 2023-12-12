@@ -119,16 +119,19 @@
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mm-gen-recs" onclick="generateRecommendations()">
         -->
           <section id="recommendationsSection" class="mdl-cell mdl-cell--12-col">
-              <p class="mm-desc"><b>ChatGPT Recommendations: </b></p>
+              <p class="mm-desc"><b>Generated Recommendations for Accessibilility Improvement </b></p>
               <div id="recommendations" class="mdl-cell mdl-cell--12-col"></div>
           </section>
+
         <script>
           // Retrieve the recommendations from local storage
           var recommendations = localStorage.getItem('recommendations');
 
+          
           if (recommendations !== null) {
               // Process or display recommendations as needed
               document.getElementById('recommendations').innerText = recommendations;
+              document.getElementById('recommendations').style.backgroundColor = "rgb(248, 226, 230)";
               
               // Clear the stored recommendation data in local storage
               localStorage.removeItem('recommendations');
@@ -136,6 +139,7 @@
               console.error("ughhhhhh");
           }
         </script>
+
       </section>
 
     </main>
