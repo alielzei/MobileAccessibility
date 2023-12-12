@@ -134,6 +134,26 @@ body {background-color: rgb(252, 200, 209);}
 }
 
 .mm-gen-recs {
-    padding: 10px, 10px, 10px, 10px;
-    margin-left: 80px;
+    font-size: medium;
+    padding: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 8x;
+    margin-left: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(248, 226, 230, 0.808);
+    border: 1px rgb(100, 100, 100);
+    border-style:groove
+}
+
+#recommendations {
+    background-color: rgba(248, 226, 230, 0.808);
+    font-size: medium;
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 50px;
+    border: 1px rgb(100, 100, 100);
+    border-style:groove
 }
