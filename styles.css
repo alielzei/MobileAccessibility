@@ -157,3 +157,10 @@ body {background-color: rgb(252, 200, 209);}
     border: 1px rgb(100, 100, 100);
     border-style:groove
 }
+  .axis text {
+    font-size: 13px; /* Adjust the font size of the axis text */
+  }
+  
+  .axis line, .axis path {
+    stroke-width: 2px; /* Adjust the stroke width of the axis lines and paths */
+  }
