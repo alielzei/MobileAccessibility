@@ -67,7 +67,26 @@
         <section class="mdl-cell mdl-cell--12-col">
           <!--TODO: print final score and get rid of the little alert-->
           <p class="mm-desc"><b>Final Score:</b> <span id="finalScorePlaceholder"></span></p>
+          <script>
+            // Function to get URL parameters by name
+            function getParameterByName(name, url) {
+              if (!url) url = window.location.href;
+              name = name.replace(/[\[\]]/g, "\\$&");
+              var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                  results = regex.exec(url);
+              if (!results) return null;
+              if (!results[2]) return '';
+              return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+          
+            // Get the 'finalScore' parameter from the URL
+            var finalScore = getParameterByName('finalScore');
+          
+            // Display the final score in the placeholder
+            document.getElementById('finalScorePlaceholder').innerText = finalScore;
+          </script>
         </section>
+    
       </section>
       
       <section class="mdl-grid center-items">
@@ -76,7 +95,7 @@
         <section class="mdl-cell mdl-cell--4-col mm-gradient">
           <svg id="scale" width="200" height="40"></svg>
           <script src="js/scale.js"></script> 
-          <p class="mm-desc">Gradient Range Description</p>
+          <p class="mm-desc">This gradient quantifies your application's accessibility based on a formula we devised upon the helpfulness of each checklist item </p>
         </section>
         <section class="mdl-layout-spacer"></section>
       </section>
@@ -86,35 +105,33 @@
         <section class="mdl-layout-spacer"></section>
         <section class="mdl-cell mdl-cell--4-col mm-piechart">
           <canvas id="PrioritiesChart" width="50" height="50"></canvas>
-          <p class="mm-desc">Pie Chart Table Description</p>
+          <p class="mm-desc">This pie chart illustrates the percentage that each accessibility section makes up in your website's accessibility checklist</p>
         </section>
         <section class="mdl-layout-spacer"></section>
       </section>
         
       <section class="mdl-grid center-items">
-        <!--ChatGPT Recommendations-->
+        <!--ChatGPT Recommendations
         <section class="mdl-layout-spacer"></section>
         <section class="mdl-cell mdl-cell--4-col">
           <script src="js/chatgpt.js"></script>
           <form>
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mm-gen-recs" onclick="generateRecommendations()">
-        <section class="mdl-cell mdl-cell--12-col">
-          <p class="mm-desc"><b>ChatGPT recs will go here!!</b></p>
-            <!--<button id="generateButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                Generate Recommendations
-            </button>-->
-            <section id="recommendationsSection" class="mdl-cell mdl-cell--12-col">
-              <p class="mm-desc"><b>ChatGPT Recommendations</b></p>
-              <div id="recommendations"></div>
+        -->
+          <section id="recommendationsSection" class="mdl-cell mdl-cell--12-col">
+              <p class="mm-desc"><b>Generated Recommendations for Accessibilility Improvement </b></p>
+              <div id="recommendations" class="mdl-cell mdl-cell--12-col"></div>
           </section>
-        </section>
+
         <script>
           // Retrieve the recommendations from local storage
           var recommendations = localStorage.getItem('recommendations');
 
+          
           if (recommendations !== null) {
               // Process or display recommendations as needed
               document.getElementById('recommendations').innerText = recommendations;
+              document.getElementById('recommendations').style.backgroundColor = "rgb(248, 226, 230)";
               
               // Clear the stored recommendation data in local storage
               localStorage.removeItem('recommendations');
@@ -122,6 +139,7 @@
               console.error("ughhhhhh");
           }
         </script>
+
       </section>
 
     </main>
