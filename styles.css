@@ -223,6 +223,6 @@ body {
     100% { transform: rotate(360deg); }
 }
 
-.title-load {
-    text-decoration: white;
+#title-load {
+    color:white;
 }
