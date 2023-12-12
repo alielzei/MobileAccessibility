@@ -45,7 +45,7 @@ function calculateFinalScore(responses) {
         }
     }
     console.log('Final Score: ', finalScore);
-    alert('Your final score is: ' + finalScore); //temp
+    //alert('Your final score is: ' + finalScore); //temp
     //document.getElementById("finalScore").innerText = finalScore;
     return finalScore;
 }
